@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page/main-page.component';
 import { HeaderComponent } from './main-page/shared/components/header/header.component';
 import { HeroComponent } from './main-page/shared/components/hero/hero.component';
+import { LoaderComponent } from './main-page/shared/components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { HeroComponent } from './main-page/shared/components/hero/hero.component
     MainPageComponent,
     HeaderComponent,
     HeroComponent,
+    LoaderComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

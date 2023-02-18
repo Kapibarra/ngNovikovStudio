@@ -1,0 +1,83 @@
+$color-bg: black;
+$color: rgb(239, 96, 255);
+$size: 20px;
+$dur: 1s;
+
+// display: flex
+.df {
+  display: flex;
+
+  &.center {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+//
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: $color-bg;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+.loader-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+}
+.loader {
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, 0);
+}
+.loader-text {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: aliceblue;
+  text-align: center;
+}
+//
+.hex {
+  &.down {
+    transform: rotate(180deg);
+  }
+
+  .top {
+    height: 0;
+    width: 0;
+    margin: 0 (-$size / 2);
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: ($size * 1.8) solid $color;
+    filter: drop-shadow(0 0 ($size * 1.6) $color);
+    animation: $dur blink infinite;
+  }
+
+  @for $i from 1 through 11 {
+    &:nth-child(#{$i}) .top {
+      animation-delay: -($dur / 11) * $i;
+    }
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.1;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
