@@ -9,11 +9,20 @@ import { HeaderComponent } from './main-page/shared/components/header/header.com
 import { HeroComponent } from './main-page/shared/components/hero/hero.component';
 import { PrimaryButtonComponent } from './main-page/shared/components/primary-button/primary-button.component';
 import { PrimaryButtonBigComponent } from './main-page/shared/components/primary-button-big/primary-button-big.component';
+import { TypingAnimatorModule } from 'angular-typing-animator';
 
 @NgModule({
-  declarations: [AppComponent, MainPageComponent, LoaderComponent, HeaderComponent, HeroComponent, PrimaryButtonComponent, PrimaryButtonBigComponent],
+  declarations: [
+    AppComponent,
+    MainPageComponent,
+    LoaderComponent,
+    HeaderComponent,
+    HeroComponent,
+    PrimaryButtonComponent,
+    PrimaryButtonBigComponent,
+  ],
   providers: [],
   bootstrap: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, TypingAnimatorModule],
 })
 export class AppModule {}

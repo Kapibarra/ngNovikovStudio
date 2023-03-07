@@ -21,6 +21,7 @@
     "@ngx-translate/core": "^14.0.0",
     "@splinetool/loader": "^0.9.214",
     "@splinetool/runtime": "^0.9.214",
+    "angular-typing-animator": "^0.0.9",
     "rxjs": "~7.5.0",
     "three": "^0.149.0",
     "three-gltf-loader": "^1.111.0",
