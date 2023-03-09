@@ -13,6 +13,7 @@ import { TypingAnimatorModule } from 'angular-typing-animator';
 import { SwiperModule } from 'swiper/angular';
 import { CounterComponent } from './main-page/shared/components/counter/counter.component';
 import { NgxAnimatedCounterModule } from '@bugsplat/ngx-animated-counter';
+import { PortfolioComponent } from './main-page/shared/components/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { NgxAnimatedCounterModule } from '@bugsplat/ngx-animated-counter';
     PrimaryButtonComponent,
     PrimaryButtonBigComponent,
     CounterComponent,
+    PortfolioComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

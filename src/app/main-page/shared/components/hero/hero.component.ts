@@ -20,7 +20,7 @@ export class HeroComponent implements OnInit {
     navigation: false,
     pagination: { clickable: true },
     autoplay: {
-      delay: 500000,
+      delay: 5000,
       disableOnInteraction: false,
     },
   };

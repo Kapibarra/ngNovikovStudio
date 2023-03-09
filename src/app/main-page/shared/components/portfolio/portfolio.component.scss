@@ -1,0 +1,51 @@
+.portfolio__wrapper {
+  & .portfolio {
+    & .portfolio__item {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      & .item__inner-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 40px;
+        & .primary-button-big {
+          width: 340px !important;
+        }
+        & .portfolio__border {
+        }
+        & .portfolio__title {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          font-family: "Jost";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 64px;
+          line-height: 100%;
+          /* identical to box height, or 64px */
+
+          text-transform: lowercase;
+
+          color: #ffffff;
+          gap: 40px;
+          & .title-logo {
+          }
+        }
+        & .portfolio__description {
+          font-family: "Jost";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 20px;
+          /* identical to box height, or 100% */
+
+          text-align: right;
+          text-transform: lowercase;
+
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
