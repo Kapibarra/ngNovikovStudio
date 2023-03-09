@@ -10,7 +10,7 @@ import { HeroComponent } from './main-page/shared/components/hero/hero.component
 import { PrimaryButtonComponent } from './main-page/shared/components/primary-button/primary-button.component';
 import { PrimaryButtonBigComponent } from './main-page/shared/components/primary-button-big/primary-button-big.component';
 import { TypingAnimatorModule } from 'angular-typing-animator';
-
+import { SwiperModule } from 'swiper/angular';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +23,11 @@ import { TypingAnimatorModule } from 'angular-typing-animator';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, TypingAnimatorModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    TypingAnimatorModule,
+    SwiperModule,
+  ],
 })
 export class AppModule {}
