@@ -52,13 +52,13 @@
 
 .hero__description-section {
   width: 100%;
-  max-width: 700px;
-  height: 100%;
+  width: 670px;
+  height: 705px;
   background: url("../../../../../assets/images/hero-bg-graphic.png");
   background-repeat: no-repeat;
   background-size: cover;
   box-sizing: border-box;
-  padding: 230px 80px 120px 0px;
+  padding: 295px 40px 120px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,11 +103,15 @@
   & .hero-service-slider {
     width: 100%;
     max-width: 700px;
+    margin-top: 110px;
     & .hero-first-slide {
       background: linear-gradient(149.63deg, #5c009e 0%, #d5ff40 108.23%);
       border-radius: 25px;
       box-sizing: border-box;
       padding: 25px;
+      min-height: 450px;
+      position: relative;
+      margin-bottom: 15px;
       & .first-slide-title {
         font-family: "Jost";
         font-style: normal;
@@ -116,6 +120,90 @@
         line-height: 30px;
         letter-spacing: -0.07em;
         color: #ffffff;
+      }
+      & .first-slide-text {
+        font-family: "Jura";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 26px;
+        /* or 83% */
+        margin-top: 130px;
+        margin-bottom: 160px;
+        color: #ffffff;
+      }
+      & .first-slide-mark {
+        position: absolute;
+        bottom: 10px;
+        right: -45px;
+      }
+    }
+    & .hero-second-slide {
+      background: linear-gradient(114.68deg, #ffffff 0%, #d5ff40 74.27%);
+      border-radius: 25px;
+      box-sizing: border-box;
+      padding: 25px;
+      min-height: 450px;
+      position: relative;
+      & .second-slide-title {
+        font-family: "Jost";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 30px;
+        letter-spacing: -0.07em;
+        color: #000000;
+      }
+      & .second-slide-text {
+        font-family: "Jura";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 26px;
+        /* or 83% */
+        margin-top: 130px;
+        margin-bottom: 160px;
+        color: #000000;
+        width: 250px;
+      }
+      & .second-slide-mark {
+        position: absolute;
+        bottom: 10px;
+        right: -45px;
+      }
+    }
+    & .hero-third-slide {
+      background: linear-gradient(149.63deg, #d5ff40 0%, #5f059c 108.23%);
+      border-radius: 25px;
+      box-sizing: border-box;
+      padding: 25px;
+      min-height: 504px;
+      position: relative;
+      & .third-slide-title {
+        font-family: "Jost";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 30px;
+        letter-spacing: -0.07em;
+        color: #ffffff;
+      }
+      & .third-slide-text {
+        font-family: "Jura";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 26px;
+        /* or 83% */
+        margin-top: 130px;
+        margin-bottom: 160px;
+        color: #000000;
+        width: 250px;
+      }
+      & .third-slide-mark {
+        position: absolute;
+        bottom: 10px;
+        right: -45px;
       }
     }
   }
@@ -145,6 +233,9 @@
   font-size: 32px;
   line-height: 42px;
   color: #f55b4e;
+}
+.highlighted-purple {
+  color: #5f059c;
 }
 .typed__subtitle {
   color: #d5ff40;
