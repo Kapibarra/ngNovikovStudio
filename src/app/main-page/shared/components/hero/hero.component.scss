@@ -58,9 +58,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   box-sizing: border-box;
-  padding: 230px 100px 200px 120px;
+  padding: 230px 80px 120px 0px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 30px;
   & .description__title {
     font-family: "Jura";
