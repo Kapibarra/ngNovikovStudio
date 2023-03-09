@@ -5,6 +5,12 @@
 body {
   margin: 0;
   background: #0f0f0f;
+  box-sizing: border-box;
+  padding: 10px 10px;
+}
+.typed-cursor {
+  color: #f9f9f9 !important;
+  font-size: 40px;
 }
 html,
 body {

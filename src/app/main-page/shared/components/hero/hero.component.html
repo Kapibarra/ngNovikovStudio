@@ -1,9 +1,19 @@
 <div class="hero__wrapper">
   <div class="hero">
     <div class="hero-top-section">
-      <h1 class="hero__title">
-        <span typingAnimator [sentences]="listOfStrings"></span>
-      </h1>
+      <div class="title__wrapper">
+        <h1 class="hero__title">
+          NOVIKOV <span class="highlighted">STUDIO</span>
+        </h1>
+        <span
+          class="typed__subtitle"
+          typingAnimator
+          [sentences]="listOfStrings"
+          [deleteSpeed]="10"
+          [showCursor]="true"
+        ></span>
+      </div>
+
       <div class="hero__image">
         <img src="assets/images/hero-image.png" />
       </div>

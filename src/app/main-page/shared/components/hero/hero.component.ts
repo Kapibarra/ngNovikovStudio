@@ -7,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroComponent implements OnInit {
   listOfStrings = [
-    'NOVIKOV STUDIO',
-    'WEB РАЗРАБОТКА',
-    'ДИЗАЙН ПРОЕКТЫ',
-    'DIGITAL МАРКЕТИНГ',
+    'Web - Разработка',
+    'Современный дизайн',
+    'Digital Marketing',
   ];
   constructor() {}
 
