@@ -152,3 +152,30 @@ body {
 canvas {
   display: block;
 }
+//Swiper inset color
+// .swiper-slide-next .hero-second-slide {
+//   box-shadow: inset 0px 5px 10px 1px #f24342;
+// }
+// .swiper-slide-next .hero-third-slide {
+//   box-shadow: inset 0px 5px 10px 1px #f24342;
+// }
+// .swiper-slide-next .hero-first-slide {
+//   box-shadow: inset 0px 5px 10px 1px #f24342;
+// }
+.swiper {
+  box-shadow: 60px 0px 25px -30px rgba(15, 15, 15, 1) inset;
+}
+.highlighted {
+  color: #d5ff40;
+}
+.highlighted-pink {
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42px;
+  color: #f55b4e;
+}
+.highlighted-purple {
+  color: #5f059c;
+}

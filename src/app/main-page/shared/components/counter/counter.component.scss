@@ -1,0 +1,47 @@
+.counter {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 160px;
+  & .counter__card {
+    width: 328px;
+    & .counter-border {
+      height: 2px;
+      background: #ffffff;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+    & .counter__title {
+      font-family: "Jura";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 100%;
+      /* identical to box height, or 13px */
+
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+    & .counter__count {
+      font-family: "Jost";
+      font-style: normal;
+      font-weight: 900;
+      font-size: 80px;
+      line-height: 100%;
+      /* identical to box height, or 80px */
+
+      letter-spacing: 1px;
+      text-transform: uppercase;
+
+      color: #ffffff;
+    }
+  }
+}

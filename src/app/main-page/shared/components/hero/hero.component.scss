@@ -107,6 +107,7 @@
     width: 100%;
     max-width: 700px;
     margin-top: 110px;
+
     & .hero-first-slide {
       background: linear-gradient(149.63deg, #5c009e 0%, #d5ff40 108.23%);
       border-radius: 25px;
@@ -142,7 +143,13 @@
       }
     }
     & .hero-second-slide {
-      background: linear-gradient(114.68deg, #ffffff 0%, #d5ff40 74.27%);
+      background: linear-gradient(
+        150.15deg,
+        #9c64a7 0%,
+        #d1f743 38.87%,
+        #b2b45c 64.88%,
+        #9f5cb4 100%
+      );
       border-radius: 25px;
       box-sizing: border-box;
       padding: 25px;
@@ -226,20 +233,7 @@
     transform: translateY(-15px);
   }
 }
-.highlighted {
-  color: #d5ff40;
-}
-.highlighted-pink {
-  font-family: "Jura";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 42px;
-  color: #f55b4e;
-}
-.highlighted-purple {
-  color: #5f059c;
-}
+
 .typed__subtitle {
   color: #d5ff40;
   font-size: 40px;

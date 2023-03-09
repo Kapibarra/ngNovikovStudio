@@ -11,6 +11,9 @@ import { PrimaryButtonComponent } from './main-page/shared/components/primary-bu
 import { PrimaryButtonBigComponent } from './main-page/shared/components/primary-button-big/primary-button-big.component';
 import { TypingAnimatorModule } from 'angular-typing-animator';
 import { SwiperModule } from 'swiper/angular';
+import { CounterComponent } from './main-page/shared/components/counter/counter.component';
+import { NgxAnimatedCounterModule } from '@bugsplat/ngx-animated-counter';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +23,7 @@ import { SwiperModule } from 'swiper/angular';
     HeroComponent,
     PrimaryButtonComponent,
     PrimaryButtonBigComponent,
+    CounterComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
@@ -28,6 +32,7 @@ import { SwiperModule } from 'swiper/angular';
     AppRoutingModule,
     TypingAnimatorModule,
     SwiperModule,
+    NgxAnimatedCounterModule,
   ],
 })
 export class AppModule {}
