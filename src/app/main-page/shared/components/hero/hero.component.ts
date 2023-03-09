@@ -15,12 +15,11 @@ export class HeroComponent implements OnInit {
   ];
   config: SwiperOptions = {
     slidesPerView: 2,
-    spaceBetween: 0,
+    spaceBetween: 20,
     navigation: false,
     pagination: { clickable: true },
-    scrollbar: { draggable: true },
     autoplay: {
-      delay: 5000,
+      delay: 500000,
       disableOnInteraction: false,
     },
   };

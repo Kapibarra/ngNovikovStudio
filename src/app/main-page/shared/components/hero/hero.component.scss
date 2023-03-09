@@ -103,6 +103,21 @@
   & .hero-service-slider {
     width: 100%;
     max-width: 700px;
+    & .hero-first-slide {
+      background: linear-gradient(149.63deg, #5c009e 0%, #d5ff40 108.23%);
+      border-radius: 25px;
+      box-sizing: border-box;
+      padding: 25px;
+      & .first-slide-title {
+        font-family: "Jost";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 30px;
+        letter-spacing: -0.07em;
+        color: #ffffff;
+      }
+    }
   }
 }
 @keyframes bounce {
