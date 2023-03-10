@@ -14,6 +14,7 @@ import { SwiperModule } from 'swiper/angular';
 import { CounterComponent } from './main-page/shared/components/counter/counter.component';
 import { NgxAnimatedCounterModule } from '@bugsplat/ngx-animated-counter';
 import { PortfolioComponent } from './main-page/shared/components/portfolio/portfolio.component';
+import { ServicesComponent } from './main-page/shared/components/services/services.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { PortfolioComponent } from './main-page/shared/components/portfolio/port
     PrimaryButtonBigComponent,
     CounterComponent,
     PortfolioComponent,
+    ServicesComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
