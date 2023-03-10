@@ -1,6 +1,21 @@
 <div class="header__wrapper">
   <div class="header">
-    <div class="header-burger"></div>
+    <div class="burger-menu">
+      <div
+        [ngClass]="{ active: isActiveMenu, 'not-active': !isActiveMenu }"
+        (click)="isActiveMenu = !isActiveMenu"
+        class="btn-menu"
+      >
+        <span></span>
+        <span></span>
+      </div>
+    </div>
     <div class="header__logo"><img src="assets/images/logo.svg" /></div>
   </div>
 </div>
+<app-menu
+  [ngClass]="{ active: isActiveMenu }"
+  [(isActiveMenu)]="isActiveMenu"
+  class="dark-nav"
+>
+</app-menu>
