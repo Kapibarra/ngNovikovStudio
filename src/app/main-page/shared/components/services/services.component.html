@@ -1,1 +1,22 @@
-<p>services works!</p>
+<div class="service__wrapper">
+  <div class="service">
+    <div class="service__title">
+      <img src="assets/images/icons/star-icon.svg" />
+      <h2 class="service__title-text">
+        услуги для <span class="highlighted">вашего бизнеса</span>
+      </h2>
+      <img class="service__content-img" src="assets/images/logo-big.png" />
+    </div>
+    <div class="service__description">
+      <div class="service__description-item" *ngFor="let service of services">
+        <h3 class="description__item-title">
+          <span class="number">0{{ service.number }}</span
+          ><span class="dot-icon">·</span>{{ service.title }}
+        </h3>
+        <div class="description__item-text">
+          {{ service.description }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

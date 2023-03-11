@@ -267,3 +267,29 @@ canvas {
 .highlighted-purple {
   color: #5f059c;
 }
+.number {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 120%;
+  /* or 38px */
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+.dot-icon {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 120%;
+  /* or 38px */
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #5f059c;
+}

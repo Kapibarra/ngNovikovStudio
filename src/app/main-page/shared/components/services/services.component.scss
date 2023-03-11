@@ -1,0 +1,74 @@
+.service__wrapper {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  margin-top: 160px;
+  & .service {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    & .service__title {
+      width: 100%;
+      max-width: 650px;
+      & .service__title-text {
+        font-family: "Jost";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 80px;
+        line-height: 100%;
+        /* or 80px */
+        text-align: right;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-top: 40px;
+      }
+      & .service__content-img {
+        display: block;
+        margin-left: auto;
+      }
+    }
+    & .service__description {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      & .service__description-item {
+        background: #d5ff40;
+        border-radius: 0px 20px 20px 0px;
+        width: 100%;
+        max-width: 754px;
+        box-sizing: border-box;
+        padding: 48px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        & .description__item-title {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 18px;
+          font-family: "Jost";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 32px;
+          line-height: 120%;
+          /* or 38px */
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          color: #000000;
+        }
+        & .description__item-text {
+          font-family: "Jura";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 28px;
+          /* or 31px */
+          color: #191919;
+        }
+      }
+    }
+  }
+}
