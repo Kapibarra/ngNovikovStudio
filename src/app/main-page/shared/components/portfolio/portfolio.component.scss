@@ -4,24 +4,25 @@
     text-decoration: none;
   }
   & .portfolio__title-header {
-    font-family: "Neue Machina";
-    font-style: italic;
+    font-family: "Jura";
     font-weight: 300;
     font-size: 60px;
     line-height: 100%;
     /* or 80px */
     width: 100%;
     max-width: 1600px;
-    margin: 0 auto;
     text-align: right;
     letter-spacing: 1px;
     text-transform: lowercase;
-
+    margin: 0 auto;
     color: #ffffff;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: flex-start;
     margin-bottom: 120px;
+    & .porfolio__title-icon {
+    }
   }
   & .portfolio {
     width: 100%;
