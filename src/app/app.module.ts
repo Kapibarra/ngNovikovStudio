@@ -16,6 +16,7 @@ import { NgxAnimatedCounterModule } from '@bugsplat/ngx-animated-counter';
 import { PortfolioComponent } from './main-page/shared/components/portfolio/portfolio.component';
 import { ServicesComponent } from './main-page/shared/components/services/services.component';
 import { MenuComponent } from './main-page/shared/components/menu/menu.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { MenuComponent } from './main-page/shared/components/menu/menu.component
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     TypingAnimatorModule,
     SwiperModule,
     NgxAnimatedCounterModule,
