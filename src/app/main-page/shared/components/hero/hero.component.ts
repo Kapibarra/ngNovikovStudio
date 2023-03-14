@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import SwiperCore, { SwiperOptions, Navigation, Autoplay } from 'swiper';
 // install Swiper modules
 SwiperCore.use([Navigation, Autoplay]);

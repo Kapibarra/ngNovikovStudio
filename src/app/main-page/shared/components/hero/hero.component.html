@@ -5,13 +5,17 @@
         <h1 class="hero__title">
           NOVIKOV <span class="highlighted">STUDIO</span>
         </h1>
-        <!-- <span
-          class="typed__subtitle"
-          typingAnimator
-          [sentences]="listOfStrings"
-          [deleteSpeed]="50"
-          [showCursor]="true"
-        ></span> -->
+        <ngx-typed-js
+          [strings]="[
+            'Web - Разработка',
+            'Современный дизайн',
+            'Digital Marketing'
+          ]"
+          [loop]="true"
+          [typeSpeed]="60"
+        >
+          <span class="typed__subtitle typing"></span>
+        </ngx-typed-js>
       </div>
 
       <div class="hero__image">
