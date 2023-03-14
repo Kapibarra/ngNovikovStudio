@@ -9,7 +9,6 @@ import { HeaderComponent } from './main-page/shared/components/header/header.com
 import { HeroComponent } from './main-page/shared/components/hero/hero.component';
 import { PrimaryButtonComponent } from './main-page/shared/components/primary-button/primary-button.component';
 import { PrimaryButtonBigComponent } from './main-page/shared/components/primary-button-big/primary-button-big.component';
-import { TypingAnimatorModule } from 'angular-typing-animator';
 import { SwiperModule } from 'swiper/angular';
 import { CounterComponent } from './main-page/shared/components/counter/counter.component';
 import { NgxAnimatedCounterModule } from '@bugsplat/ngx-animated-counter';
@@ -17,6 +16,9 @@ import { PortfolioComponent } from './main-page/shared/components/portfolio/port
 import { ServicesComponent } from './main-page/shared/components/services/services.component';
 import { MenuComponent } from './main-page/shared/components/menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
 
 @NgModule({
   declarations: [
@@ -38,9 +40,10 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    TypingAnimatorModule,
     SwiperModule,
     NgxAnimatedCounterModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideDatabase(() => getDatabase()),
   ],
 })
 export class AppModule {}

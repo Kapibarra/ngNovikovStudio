@@ -16,7 +16,7 @@ export class MenuComponent implements OnInit {
     this.isActiveMenu = !this.isActiveMenu;
     this.isActiveMenuChange.emit(this.isActiveMenu);
   }
-  aboutScroll() {
+  scrollTo() {
     setTimeout(() => {
       this.scroller.scrollToAnchor('about');
     }, 1000);
