@@ -11,7 +11,7 @@ export class MarqueeComponent implements AfterViewInit {
   constructor(private elementRef: ElementRef) {}
 
   ngAfterViewInit(): void {
-    this.marquee('.marquee', 0.5);
+    this.marquee('.marquee', 0.15);
   }
 
   marquee(selector: string, speed: number) {
@@ -21,6 +21,10 @@ export class MarqueeComponent implements AfterViewInit {
     const firstElement = parentSelector.children[0];
     let i = 0;
 
+    parentSelector.insertAdjacentHTML('beforeend', clone);
+    parentSelector.insertAdjacentHTML('beforeend', clone);
+    parentSelector.insertAdjacentHTML('beforeend', clone);
+    parentSelector.insertAdjacentHTML('beforeend', clone);
     parentSelector.insertAdjacentHTML('beforeend', clone);
     parentSelector.insertAdjacentHTML('beforeend', clone);
     parentSelector.insertAdjacentHTML('beforeend', clone);
