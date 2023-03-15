@@ -20,6 +20,7 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { NgxTypedJsModule } from 'ngx-typed-js';
+import { MarqueeComponent } from './main-page/shared/components/marquee/marquee.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { NgxTypedJsModule } from 'ngx-typed-js';
     PortfolioComponent,
     ServicesComponent,
     MenuComponent,
+    MarqueeComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
