@@ -21,6 +21,7 @@ import { environment } from '../environments/environment';
 import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { NgxTypedJsModule } from 'ngx-typed-js';
 import { MarqueeComponent } from './main-page/shared/components/marquee/marquee.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +41,7 @@ import { MarqueeComponent } from './main-page/shared/components/marquee/marquee.
   bootstrap: [AppComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     SwiperModule,

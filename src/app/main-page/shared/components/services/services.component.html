@@ -8,7 +8,13 @@
       <img class="service__content-img" src="assets/images/logo-big.png" />
     </div>
     <div class="service__description">
-      <div class="service__description-item" *ngFor="let service of services">
+      <div
+        class="service__description-item"
+        *ngFor="let service of services"
+        (mouseenter)="service.isHovered = true"
+        (mouseleave)="service.isHovered = false"
+        [ngClass]="service.isHovered ? 'active' : 'static'"
+      >
         <h3 class="description__item-title">
           <span class="number">0{{ service.number }}</span
           ><span class="dot-icon">·</span>{{ service.title }}
@@ -16,6 +22,10 @@
         <div class="description__item-text">
           {{ service.description }}
         </div>
+        <app-primary-button-big
+          *ngIf="service.isHovered"
+          [label]="'Заказать'"
+        ></app-primary-button-big>
       </div>
     </div>
   </div>
