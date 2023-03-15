@@ -25,7 +25,7 @@ import { Component, OnInit } from '@angular/core';
         'closed',
         style({
           height: '0px',
-          opacity: 1,
+          opacity: 0,
         })
       ),
       transition('open => closed', [animate('500ms ease-in-out')]),
@@ -50,11 +50,11 @@ export class ServicesComponent implements OnInit {
         'Разработка дизайн концепции и дизайн проекта в Figma c учетом всех пожеланий заказчика. Вы ТОЧНО останитесь довольны!',
     },
     {
-      title: 'Web - разработка',
+      title: 'Интернет - продвижение',
       number: 3,
       isHovered: false,
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien et ligula. Massa tempor nec feugiat nisl.',
+        'Настройка и ведение Вашей рекламной компании в Яндекс Директ',
     },
     {
       title: 'Nocode - разработка',
