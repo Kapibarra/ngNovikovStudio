@@ -1,21 +1,24 @@
+/* =======================================
+The juicy stuff
+======================================= */
 .marquee {
+  display: flex;
   overflow: hidden;
+  gap: 1rem;
+  font-size: 44px;
+  line-height: 44px;
+  color: azure;
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.marquee h1 {
+  font-size: 4rem;
   white-space: nowrap;
-  font-size: 30px;
-  font-weight: 500;
-  color: aliceblue;
-}
-
-.marquee-content {
-  display: inline-block;
-  animation: marquee linear infinite;
-}
-
-@keyframes marquee {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
+  text-transform: uppercase;
+  align-self: center;
 }

@@ -1,37 +1,36 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-marquee',
   templateUrl: './marquee.component.html',
   styleUrls: ['./marquee.component.scss'],
 })
-export class MarqueeComponent implements OnInit {
-  @Input() text: string = '';
-  @Input() speed: number = 50; // скорость прокрутки, значение по умолчанию 50
-  transform!: string;
-  constructor() {}
+export class MarqueeComponent implements AfterViewInit {
+  text: string = '';
 
-  ngOnInit() {
-    this.startAnimation();
+  constructor(private elementRef: ElementRef) {}
+
+  ngAfterViewInit(): void {
+    this.marquee('.marquee', 0.5);
   }
 
-  startAnimation() {
-    const distance = this.getTextWidth();
-    const duration = distance / this.speed;
+  marquee(selector: string, speed: number) {
+    const parentSelector =
+      this.elementRef.nativeElement.querySelector(selector);
+    const clone = parentSelector.innerHTML;
+    const firstElement = parentSelector.children[0];
+    let i = 0;
 
-    setInterval(() => {
-      this.transform = `translateX(-${distance}px)`;
-    }, duration);
-  }
+    parentSelector.insertAdjacentHTML('beforeend', clone);
+    parentSelector.insertAdjacentHTML('beforeend', clone);
+    parentSelector.insertAdjacentHTML('beforeend', clone);
 
-  getTextWidth(): number {
-    const el = document.createElement('span');
-    el.innerText = this.text;
-    el.style.position = 'absolute';
-    el.style.visibility = 'hidden';
-    document.body.appendChild(el);
-    const width = el.offsetWidth;
-    document.body.removeChild(el);
-    return width;
+    setInterval(function () {
+      firstElement.style.marginLeft = `-${i}px`;
+      if (i > firstElement.clientWidth) {
+        i = 0;
+      }
+      i = i + speed;
+    }, 0);
   }
 }
