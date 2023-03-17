@@ -23,6 +23,7 @@
     "@ngx-translate/core": "^14.0.0",
     "@splinetool/loader": "^0.9.214",
     "@splinetool/runtime": "^0.9.214",
+    "ng-yandex-metrika": "^7.0.0",
     "ngx-typed-js": "^2.1.1",
     "rxjs": "~7.5.0",
     "swiper": "^8.2.4",

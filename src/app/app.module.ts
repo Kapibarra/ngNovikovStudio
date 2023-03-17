@@ -22,6 +22,9 @@ import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { NgxTypedJsModule } from 'ngx-typed-js';
 import { MarqueeComponent } from './main-page/shared/components/marquee/marquee.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AdminPageComponent } from './main-page/admin-page/admin-page.component';
+import { MetrikaModule } from 'ng-yandex-metrika';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +39,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ServicesComponent,
     MenuComponent,
     MarqueeComponent,
+    AdminPageComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
@@ -47,6 +51,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SwiperModule,
     NgxAnimatedCounterModule,
     NgxTypedJsModule,
+    MetrikaModule.forRoot(
+      { id: 85678959, webvisor: true }, // CounterConfig | CounterConfig[]
+      // Можно задать ид счетчика, либо порядковый номер в массиве, необязательный параметрб по умолчанию первый попавшийся.
+      85678959 // number | string
+    ),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideDatabase(() => getDatabase()),
   ],
