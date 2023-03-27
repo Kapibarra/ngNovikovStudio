@@ -25,6 +25,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminPageComponent } from './main-page/admin-page/admin-page.component';
 import { MetrikaModule } from 'ng-yandex-metrika';
 import { TeamComponent } from './main-page/shared/components/team/team.component';
+import { ContactsComponent } from './main-page/shared/components/contacts/contacts.component';
+import { FormComponent } from './main-page/shared/components/form/form.component';
+import { PopUpComponent } from './main-page/shared/components/pop-up/pop-up.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +45,9 @@ import { TeamComponent } from './main-page/shared/components/team/team.component
     MarqueeComponent,
     AdminPageComponent,
     TeamComponent,
+    ContactsComponent,
+    FormComponent,
+    PopUpComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
