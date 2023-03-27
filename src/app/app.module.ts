@@ -24,6 +24,7 @@ import { MarqueeComponent } from './main-page/shared/components/marquee/marquee.
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminPageComponent } from './main-page/admin-page/admin-page.component';
 import { MetrikaModule } from 'ng-yandex-metrika';
+import { TeamComponent } from './main-page/shared/components/team/team.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { MetrikaModule } from 'ng-yandex-metrika';
     MenuComponent,
     MarqueeComponent,
     AdminPageComponent,
+    TeamComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
