@@ -28,6 +28,7 @@ import { TeamComponent } from './main-page/shared/components/team/team.component
 import { ContactsComponent } from './main-page/shared/components/contacts/contacts.component';
 import { FormComponent } from './main-page/shared/components/form/form.component';
 import { PopUpComponent } from './main-page/shared/components/pop-up/pop-up.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { PopUpComponent } from './main-page/shared/components/pop-up/pop-up.comp
     SwiperModule,
     NgxAnimatedCounterModule,
     NgxTypedJsModule,
+    ReactiveFormsModule,
     MetrikaModule.forRoot(
       { id: 85678959, webvisor: true }, // CounterConfig | CounterConfig[]
       // Можно задать ид счетчика, либо порядковый номер в массиве, необязательный параметрб по умолчанию первый попавшийся.
