@@ -1,63 +1,60 @@
-<div class="form-container">
-  <h2 class="form-title">Contact Us</h2>
-  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
-    <div class="form-group">
-      <label for="name">Name</label>
-      <input
-        type="text"
-        id="name"
-        formControlName="name"
-        placeholder="Enter your name"
-        class="form-control"
-      />
-      <div
-        *ngIf="name.invalid && (name.dirty || name.touched)"
-        class="alert alert-danger"
-      >
-        <div *ngIf="name.errors.required">Name is required</div>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input
-        type="email"
-        id="email"
-        formControlName="email"
-        placeholder="Enter your email"
-        class="form-control"
-      />
-      <div
-        *ngIf="email.invalid && (email.dirty || email.touched)"
-        class="alert alert-danger"
-      >
-        <div *ngIf="email.errors.required">Email is required</div>
-        <div *ngIf="email.errors.email">
-          Email must be a valid email address
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="phone">Phone</label>
-      <input
-        type="tel"
-        id="phone"
-        formControlName="phone"
-        placeholder="Enter your phone number"
-        class="form-control"
-      />
-      <div
-        *ngIf="phone.invalid && (phone.dirty || phone.touched)"
-        class="alert alert-danger"
-      >
-        <div *ngIf="phone.errors.required">Phone is required</div>
-      </div>
-    </div>
-    <button
-      type="submit"
-      class="btn btn-primary"
-      [disabled]="contactForm.invalid"
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name" required />
+    <div
+      *ngIf="
+        contactForm.get('name')?.invalid && contactForm.get('name')?.touched
+      "
     >
-      Submit
-    </button>
-  </form>
-</div>
+      <div *ngIf="contactForm.get('name')?.hasError('required')">
+        Name is required.
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email" required />
+    <div
+      *ngIf="
+        contactForm.get('email')?.invalid && contactForm.get('email')?.touched
+      "
+    >
+      <div *ngIf="contactForm.get('email')?.hasError('required')">
+        Email is required.
+      </div>
+      <div *ngIf="contactForm.get('email')?.hasError('email')">
+        Invalid email format.
+      </div>
+      <div *ngIf="contactForm.get('email')?.hasError('invalidEmail')">
+        Email must contain '@'.
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <label for="phone">Phone:</label>
+    <input
+      type="tel"
+      id="phone"
+      formControlName="phone"
+      required
+      pattern="^\d{10}$"
+    />
+    <div
+      *ngIf="
+        contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched
+      "
+    >
+      <div *ngIf="contactForm.get('phone')?.hasError('required')">
+        Phone is required.
+      </div>
+      <div *ngIf="contactForm.get('phone')?.hasError('pattern')">
+        Phone must be 10 digits.
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="!contactForm.valid">Submit</button>
+</form>
