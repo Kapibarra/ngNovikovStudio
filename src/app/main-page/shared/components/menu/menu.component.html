@@ -1,5 +1,5 @@
 <div
   class="menu__wrapper"
-  [ngStyle]="{ opacity: isActiveMenu ? 1 : 0 }"
+  [ngStyle]="{ opacity: isActiveMenu ? 1 : 0, zIndex: isActiveMenu ? 10 : -10 }"
   [ngClass]="{ active: isActiveMenu, 'not-active': !isActiveMenu }"
 ></div>

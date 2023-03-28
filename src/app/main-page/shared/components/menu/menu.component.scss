@@ -1,0 +1,12 @@
+.menu__wrapper {
+  position: fixed;
+  top: 90px;
+  left: 0;
+  z-index: -10;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(12, 55, 94);
+}
+.menu__wrapper .active {
+  z-index: 10;
+}

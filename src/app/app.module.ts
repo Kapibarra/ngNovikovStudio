@@ -30,7 +30,7 @@ import { FormComponent } from './main-page/shared/components/form/form.component
 import { PopUpComponent } from './main-page/shared/components/pop-up/pop-up.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ServicesPageComponent } from './main-page/services-page/services-page.component';
-
+import { CookieService } from 'ngx-cookie-service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +52,7 @@ import { ServicesPageComponent } from './main-page/services-page/services-page.c
     PopUpComponent,
     ServicesPageComponent,
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent],
   imports: [
     BrowserModule,
