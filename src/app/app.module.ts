@@ -63,11 +63,6 @@ import { CookieService } from 'ngx-cookie-service';
     NgxAnimatedCounterModule,
     NgxTypedJsModule,
     ReactiveFormsModule,
-    MetrikaModule.forRoot(
-      { id: 85678959, webvisor: true }, // CounterConfig | CounterConfig[]
-      // Можно задать ид счетчика, либо порядковый номер в массиве, необязательный параметрб по умолчанию первый попавшийся.
-      85678959 // number | string
-    ),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideDatabase(() => getDatabase()),
   ],
