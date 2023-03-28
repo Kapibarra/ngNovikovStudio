@@ -29,6 +29,7 @@ import { ContactsComponent } from './main-page/shared/components/contacts/contac
 import { FormComponent } from './main-page/shared/components/form/form.component';
 import { PopUpComponent } from './main-page/shared/components/pop-up/pop-up.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ServicesPageComponent } from './main-page/services-page/services-page.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ContactsComponent,
     FormComponent,
     PopUpComponent,
+    ServicesPageComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
