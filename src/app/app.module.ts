@@ -31,6 +31,7 @@ import { PopUpComponent } from './main-page/shared/components/pop-up/pop-up.comp
 import { ReactiveFormsModule } from '@angular/forms';
 import { ServicesPageComponent } from './main-page/services-page/services-page.component';
 import { CookieService } from 'ngx-cookie-service';
+import { FooterComponent } from './main-page/shared/components/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +52,7 @@ import { CookieService } from 'ngx-cookie-service';
     FormComponent,
     PopUpComponent,
     ServicesPageComponent,
+    FooterComponent,
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],
