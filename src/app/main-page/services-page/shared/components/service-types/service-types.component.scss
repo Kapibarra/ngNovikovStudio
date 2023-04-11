@@ -22,6 +22,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 20px;
   width: 100%;
   max-width: 1600px;
@@ -42,6 +43,14 @@
   flex-direction: column;
   align-items: center;
 }
+.serviceTypes__item-number {
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42px;
+  color: #f55b4e;
+}
 .serviceTypes__description {
   font-family: "Jura";
   font-style: normal;
@@ -58,4 +67,26 @@
   font-size: 30px;
   line-height: 26px;
   color: #ffffff;
+}
+.serviceTypes__steps {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  & ul {
+    max-width: 720px;
+    width: 100%;
+    & li {
+      text-align: right;
+      font-family: "Jura";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 30px;
+      line-height: 76px;
+      color: #ffffff;
+      border-bottom: 1px solid rgba($color: #d5ff40, $alpha: 0.5);
+    }
+  }
 }
