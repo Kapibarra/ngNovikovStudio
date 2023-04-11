@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-primary-button-big',
@@ -7,7 +7,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PrimaryButtonBigComponent implements OnInit {
   @Input() label!: string;
+  @Output() openForm = new EventEmitter<void>();
   constructor() {}
 
   ngOnInit(): void {}
+  popUpOpen(): void {
+    this.openForm.emit();
+    console.log('pop up emit');
+  }
 }
