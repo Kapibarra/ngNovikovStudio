@@ -28,6 +28,9 @@
   max-width: 1600px;
   margin: 0 auto;
 }
+.serviceTypes__inner-wrapper {
+  margin-bottom: 60px;
+}
 .serviceTypes__title {
   font-family: "Jost";
   font-style: normal;
@@ -83,7 +86,8 @@
       font-family: "Jura";
       font-style: normal;
       font-weight: 300;
-      font-size: 30px;
+      font-size: 18px;
+      text-transform: uppercase;
       line-height: 76px;
       color: #ffffff;
       border-bottom: 1px solid rgba($color: #d5ff40, $alpha: 0.5);

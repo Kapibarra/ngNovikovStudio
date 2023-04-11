@@ -9,7 +9,7 @@
     *ngFor="let serviceType of serviceTypes"
   >
     <div class="serviceTypes__item">
-      <div class="serviceTypes__item-number">{{ serviceType.number }}</div>
+      <div class="serviceTypes__item-number">0{{ serviceType.number }}</div>
       <div class="serviceTypes__title">
         {{ serviceType.title }}
         <app-primary-button-big
@@ -30,9 +30,6 @@
     <div class="serviceTypes__steps">
       <ul>
         <li *ngFor="let list of serviceType.list">{{ list.listItem }}</li>
-        <li>продуктовое исследование</li>
-        <li>создание новой продуктовой концепции</li>
-        <li>создание новой продуктовой концепции</li>
       </ul>
     </div>
   </div>
