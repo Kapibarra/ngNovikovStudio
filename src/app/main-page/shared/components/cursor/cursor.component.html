@@ -1,5 +1,7 @@
 <!-- #Cursor -->
-<div class="cursor"></div>
-<div id="cursor">
-  <div class="cursor-circle"></div>
-</div>
+<div
+  class="cursor"
+  [style.top]="top"
+  [style.left]="left"
+  [ngClass]="{ expand: expand }"
+></div>
