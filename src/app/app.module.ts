@@ -33,6 +33,7 @@ import { ServicesPageComponent } from './main-page/services-page/services-page.c
 import { CookieService } from 'ngx-cookie-service';
 import { FooterComponent } from './main-page/shared/components/footer/footer.component';
 import { ServiceTypesComponent } from './main-page/services-page/shared/components/service-types/service-types.component';
+import { CursorComponent } from './main-page/shared/components/cursor/cursor.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { ServiceTypesComponent } from './main-page/services-page/shared/componen
     ServicesPageComponent,
     FooterComponent,
     ServiceTypesComponent,
+    CursorComponent,
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],
