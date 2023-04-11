@@ -20,7 +20,7 @@ export class CursorComponent implements OnInit {
 
   ngOnInit() {
     const mouseMove$ = fromEvent(document, 'mousemove').pipe(
-      throttle(() => interval(16))
+      throttle(() => interval(32))
     );
     mouseMove$.subscribe((event: Event) => {
       const mouseEvent = event as MouseEvent;
