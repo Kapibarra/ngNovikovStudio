@@ -4,28 +4,32 @@
       наши <span class="highlighted"> услуги</span>
     </div>
   </div>
-  <div class="serviceTypes__inner-wrapper">
+  <div
+    class="serviceTypes__inner-wrapper"
+    *ngFor="let serviceType of serviceTypes"
+  >
     <div class="serviceTypes__item">
-      <div class="serviceTypes__item-number">01</div>
+      <div class="serviceTypes__item-number">{{ serviceType.number }}</div>
       <div class="serviceTypes__title">
-        Лендинг
+        {{ serviceType.title }}
         <app-primary-button-big
           [label]="'Обсудить проект'"
         ></app-primary-button-big>
       </div>
       <div class="serviceTypes__description">
-        подойдет, если вам нужно развитие дизайна вашего продукта,
-        дизайн-концепция или усиление выделенной командой дизайнеров
+        {{ serviceType.description }}
       </div>
       <div class="serviceTypes__price">
         от
-        <span class="highlighted" style="font-size: 42px">500 000</span>
+        <span class="highlighted" style="font-size: 42px">{{
+          serviceType.price
+        }}</span>
         руб.
       </div>
     </div>
     <div class="serviceTypes__steps">
       <ul>
-        <li>аудит существующих систем и продуктов</li>
+        <li *ngFor="let list of serviceType.list">{{ list.listItem }}</li>
         <li>продуктовое исследование</li>
         <li>создание новой продуктовой концепции</li>
         <li>создание новой продуктовой концепции</li>
