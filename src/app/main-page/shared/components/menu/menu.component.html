@@ -4,7 +4,20 @@
   [ngClass]="{ active: isActiveMenu, 'not-active': !isActiveMenu }"
   [@slideInOutAnimation]="isActiveMenu ? 'in' : 'out'"
 >
-  <ul>
+  <div class="menu__contacts">
+    <ul class="menu__contacts-list">
+      <li class="contacts__list-item">
+        <a class="contacts__list-item--link"> +7 967 059 62 39 </a>
+      </li>
+      <li class="contacts__list-item">
+        <a class="contacts__list-item--link"> Telegram </a>
+      </li>
+      <li class="contacts__list-item">
+        <a class="contacts__list-item--link"> WhatsApp </a>
+      </li>
+    </ul>
+  </div>
+  <ul class="menu__contacts-list-routes">
     <li><a href="#">Главная</a></li>
     <li><a href="#">Проекты</a></li>
     <li><a href="#">Цены</a></li>
