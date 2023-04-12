@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 import { serviceTypes } from 'src/app/main-page/shared/models/serviceTypes';
 
 @Component({
@@ -7,6 +7,7 @@ import { serviceTypes } from 'src/app/main-page/shared/models/serviceTypes';
   styleUrls: ['./service-types.component.scss'],
 })
 export class ServiceTypesComponent implements OnInit {
+  public isFormOpen = false;
   serviceTypes: serviceTypes[] = [
     {
       title: 'лендинг',
