@@ -42,12 +42,15 @@ export const slideInOutAnimation = trigger('slideInOutAnimation', [
 export class MenuComponent implements OnInit, AfterViewInit {
   @Input() isActiveMenu: boolean = false;
   @Output() isActiveMenuChange = new EventEmitter<boolean>();
+  currentYear!: number;
 
   constructor(private scroller: ViewportScroller) {}
 
   ngAfterViewInit(): void {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.currentYear = new Date().getFullYear();
+  }
   closeMenu() {
     this.isActiveMenu = !this.isActiveMenu;
     this.isActiveMenuChange.emit(this.isActiveMenu);
