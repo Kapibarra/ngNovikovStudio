@@ -32,8 +32,14 @@ export class PhoneMaskDirective {
     } else {
       formattedInput = input;
     }
-
     // Set the input value with the formatted phone number
-    event.target.value = formattedInput;
+    if (event.inputType === 'deleteContentBackward') {
+      event.target.value = formattedInput.substring(
+        0,
+        formattedInput.length - 1
+      );
+    } else {
+      event.target.value = formattedInput;
+    }
   }
 }
