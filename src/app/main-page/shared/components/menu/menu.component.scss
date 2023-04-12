@@ -5,8 +5,73 @@
   z-index: -10;
   height: 100vh;
   width: 100vw;
-  background-color: rgb(12, 55, 94);
+  background-color: #0f0f0f;
 }
 .menu__wrapper .active {
   z-index: 10;
+}
+
+ul {
+  position: absolute;
+  width: 100%;
+  max-width: 1600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  li {
+    list-style: none;
+    a {
+      position: relative;
+      display: block;
+      margin: 20px 0;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #dadada;
+      font-family: "Jura";
+      font-weight: 300;
+      font-size: 60px;
+      line-height: 100%;
+      transition: 0.5s;
+      z-index: 1;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-top: 1px solid rgba($color: #d5ff40, $alpha: 0.5);
+        border-bottom: 1px solid rgba($color: #d5ff40, $alpha: 0.5);
+        transform: scaleY(2);
+        opacity: 0;
+        transition: 0.3s;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #262626;
+        transform: scale(0);
+        opacity: 0;
+        transition: 0.3s;
+        z-index: -1;
+      }
+      &:hover {
+        color: #d5ff40;
+        &:before {
+          transform: scaleY(1);
+          opacity: 1;
+        }
+        &:after {
+          transform: scaleY(1);
+          opacity: 1;
+        }
+      }
+    }
+  }
 }

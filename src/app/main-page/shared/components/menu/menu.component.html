@@ -1,5 +1,14 @@
 <div
   class="menu__wrapper"
-  [ngStyle]="{ opacity: isActiveMenu ? 1 : 0, zIndex: isActiveMenu ? 10 : -10 }"
+  [ngStyle]="{ zIndex: isActiveMenu ? 10 : 10 }"
   [ngClass]="{ active: isActiveMenu, 'not-active': !isActiveMenu }"
-></div>
+  [@slideInOutAnimation]="isActiveMenu ? 'in' : 'out'"
+>
+  <ul>
+    <li><a href="#">Главная</a></li>
+    <li><a href="#">Проекты</a></li>
+    <li><a href="#">Цены</a></li>
+    <li><a href="#">Контакты</a></li>
+    <li><a href="#">Технологии</a></li>
+  </ul>
+</div>
