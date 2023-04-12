@@ -1,4 +1,4 @@
-import { NgModule, Directive } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,7 +23,6 @@ import { NgxTypedJsModule } from 'ngx-typed-js';
 import { MarqueeComponent } from './main-page/shared/components/marquee/marquee.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminPageComponent } from './main-page/admin-page/admin-page.component';
-import { MetrikaModule } from 'ng-yandex-metrika';
 import { TeamComponent } from './main-page/shared/components/team/team.component';
 import { ContactsComponent } from './main-page/shared/components/contacts/contacts.component';
 import { FormComponent } from './main-page/shared/components/form/form.component';
@@ -35,6 +34,7 @@ import { FooterComponent } from './main-page/shared/components/footer/footer.com
 import { ServiceTypesComponent } from './main-page/services-page/shared/components/service-types/service-types.component';
 import { CursorComponent } from './main-page/shared/components/cursor/cursor.component';
 import { DialogDirective } from './main-page/shared/directives/dialog.directive';
+import { PhoneMaskDirective } from './main-page/shared/directives/phoneMask.directive';
 
 @NgModule({
   declarations: [
@@ -60,6 +60,7 @@ import { DialogDirective } from './main-page/shared/directives/dialog.directive'
     ServiceTypesComponent,
     CursorComponent,
     DialogDirective,
+    PhoneMaskDirective,
   ],
   providers: [CookieService, DialogDirective],
   bootstrap: [AppComponent],

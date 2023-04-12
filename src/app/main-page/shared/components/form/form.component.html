@@ -22,25 +22,26 @@
       "
     >
       <div *ngIf="contactForm.get('email')?.hasError('required')">
-        Email is required.
+        Email обязателен.
       </div>
       <div *ngIf="contactForm.get('email')?.hasError('email')">
-        Invalid email format.
+        Не правильный формат Email.
       </div>
       <div *ngIf="contactForm.get('email')?.hasError('invalidEmail')">
-        Email must contain '@'.
+        Email должен содержать '@'.
       </div>
     </div>
   </div>
 
   <div>
-    <label for="phone">Phone:</label>
+    <label for="phone">Ваш телефон:</label>
     <input
       type="tel"
       id="phone"
       formControlName="phone"
       required
       pattern="^\d{10}$"
+      appPhoneMask
     />
     <div
       *ngIf="
