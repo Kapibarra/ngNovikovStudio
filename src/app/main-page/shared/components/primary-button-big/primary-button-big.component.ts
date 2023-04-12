@@ -7,17 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class PrimaryButtonBigComponent implements OnInit {
   @Input() label!: string;
-  @Output() openForm = new EventEmitter<void>();
-  isFormOpen = false;
   constructor() {}
 
   ngOnInit(): void {}
-  popUpOpen(): void {
-    this.isFormOpen = true;
-    this.openForm.emit();
-    console.log('pop up emit');
-  }
-  closeForm(): void {
-    this.isFormOpen = false;
-  }
 }

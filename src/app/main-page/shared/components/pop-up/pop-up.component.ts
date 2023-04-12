@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { DialogService } from '../../services/dialog.service';
 
 @Component({
   selector: 'app-pop-up',
@@ -6,12 +7,14 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./pop-up.component.scss'],
 })
 export class PopUpComponent implements OnInit {
-  @Output() closeForm = new EventEmitter<void>();
-  isFormOpen = false;
-  constructor() {}
-
+  isActive: boolean = false;
+  constructor(private dialogService: DialogService) {}
+  get isActive$() {
+    return this.dialogService.isActive;
+  }
   ngOnInit(): void {}
-  onClose(): void {
-    this.closeForm.emit();
+
+  closeDialog() {
+    this.dialogService.closeDialog();
   }
 }

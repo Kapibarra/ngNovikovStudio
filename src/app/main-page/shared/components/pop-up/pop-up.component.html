@@ -1,5 +1,7 @@
-<div class="popup">
-  <h2>Popup Form</h2>
-  <button class="close-button" (click)="onClose()">Close</button>
-  <!-- Форма здесь -->
-</div>
+<ng-container *ngIf="isActive$">
+  <div class="popup">
+    <h2>Popup Form</h2>
+    <button class="close-button" (click)="closeDialog()">Close</button>
+    <!-- Форма здесь -->
+  </div>
+</ng-container>

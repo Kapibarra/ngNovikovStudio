@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Directive } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -34,6 +34,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { FooterComponent } from './main-page/shared/components/footer/footer.component';
 import { ServiceTypesComponent } from './main-page/services-page/shared/components/service-types/service-types.component';
 import { CursorComponent } from './main-page/shared/components/cursor/cursor.component';
+import { DialogDirective } from './main-page/shared/directives/dialog.directive';
 
 @NgModule({
   declarations: [
@@ -58,8 +59,9 @@ import { CursorComponent } from './main-page/shared/components/cursor/cursor.com
     FooterComponent,
     ServiceTypesComponent,
     CursorComponent,
+    DialogDirective,
   ],
-  providers: [CookieService],
+  providers: [CookieService, DialogDirective],
   bootstrap: [AppComponent],
   imports: [
     BrowserModule,
