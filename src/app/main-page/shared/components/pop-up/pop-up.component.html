@@ -1,7 +1,8 @@
 <ng-container *ngIf="isActive$">
-  <div class="popup">
+  <div class="popup__form" [@popupAnimation]>
     <h2>Popup Form</h2>
     <button class="close-button" (click)="closeDialog()">Close</button>
     <!-- Форма здесь -->
   </div>
+  <div class="popup__overlay"></div>
 </ng-container>
