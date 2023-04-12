@@ -35,6 +35,7 @@ import { ServiceTypesComponent } from './main-page/services-page/shared/componen
 import { CursorComponent } from './main-page/shared/components/cursor/cursor.component';
 import { DialogDirective } from './main-page/shared/directives/dialog.directive';
 import { PhoneMaskDirective } from './main-page/shared/directives/phoneMask.directive';
+import { ServiceHeroComponent } from './main-page/services-page/shared/components/service-hero/service-hero.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { PhoneMaskDirective } from './main-page/shared/directives/phoneMask.dire
     CursorComponent,
     DialogDirective,
     PhoneMaskDirective,
+    ServiceHeroComponent,
   ],
   providers: [CookieService, DialogDirective],
   bootstrap: [AppComponent],

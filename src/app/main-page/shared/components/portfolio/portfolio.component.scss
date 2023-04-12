@@ -41,6 +41,10 @@
         transition: all 0.2s ease-in-out;
         opacity: 0;
       }
+      & .portfolio__image {
+        transition: all 0.2s ease-in-out;
+        opacity: 0;
+      }
       &:hover {
         cursor: pointer;
       }
@@ -52,7 +56,12 @@
         width: 100%;
         max-width: 560px;
         max-height: 315px;
-        & video {
+        background: linear-gradient(-45deg, #d5ff40, #8b67f3, #f66050);
+        background-size: 400% 400%;
+        animation: gradient 7s ease infinite;
+        opacity: 0;
+        transition: all 0.2 ease-in-out;
+        & img {
           opacity: 0;
           width: 100%;
           max-width: 560px;
@@ -60,8 +69,11 @@
           transition: all 0.2s ease-in-out;
         }
       }
-
-      &:hover .portfolio__image video {
+      &:hover .portfolio__image {
+        transition: all 0.2s ease-in-out;
+        opacity: 1;
+      }
+      &:hover .portfolio__image img {
         transition: all 0.2s ease-in-out;
         opacity: 1;
       }
@@ -113,5 +125,16 @@
         }
       }
     }
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 20%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
