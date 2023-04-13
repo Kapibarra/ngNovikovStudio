@@ -1,6 +1,6 @@
 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
   <div>
-    <label for="name">Name:</label>
+    <label for="name">Ваше имя:</label>
     <input type="text" id="name" formControlName="name" required />
     <div
       *ngIf="
@@ -8,7 +8,7 @@
       "
     >
       <div *ngIf="contactForm.get('name')?.hasError('required')">
-        Name is required.
+        Заполните имя
       </div>
     </div>
   </div>
@@ -49,13 +49,13 @@
       "
     >
       <div *ngIf="contactForm.get('phone')?.hasError('required')">
-        Phone is required.
+        Телефон обязателен.
       </div>
       <div *ngIf="contactForm.get('phone')?.hasError('pattern')">
-        Phone must be 10 digits.
+        Не верный телефон.
       </div>
     </div>
   </div>
 
-  <button type="submit" [disabled]="!contactForm.valid">Submit</button>
+  <button type="submit" [disabled]="!contactForm.valid">Отправить</button>
 </form>

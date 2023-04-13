@@ -1,4 +1,7 @@
 .portfolio__wrapper {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
   margin-top: 160px;
   & a {
     text-decoration: none;
@@ -20,9 +23,22 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
-    margin-bottom: 120px;
+
     & .porfolio__title-icon {
     }
+  }
+  & .portfolio__subtitle {
+    font-family: "Jost";
+    font-weight: 100;
+
+    font-size: 32px;
+    line-height: 100%;
+    text-align: right;
+    color: white;
+    max-width: 800px;
+    margin-left: auto;
+    margin-bottom: 120px;
+    /* or 80px */
   }
   & .portfolio {
     width: 100%;
