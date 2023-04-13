@@ -1,15 +1,94 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: #f1f1f1;
-  border-radius: 10px;
-  padding: 30px;
+  gap: 20px;
   max-width: 800px;
-  margin: 0 auto;
-  margin-top: 50px;
+  margin-left: auto;
+  margin-top: 120px;
   font-family: "Jost";
   text-transform: uppercase;
+
+  & .contact-form-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    & .contact-form-label__group {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      gap: 5px;
+    }
+    & .error {
+      color: coral;
+    }
+    & label {
+      font-family: "Jost";
+      color: #f9f9f9;
+      font-weight: 100;
+      font-size: 20px;
+      line-height: 20px;
+    }
+    & input {
+      border: none;
+      background-color: rgba($color: #000000, $alpha: 0);
+      border-bottom: #dadada 1px solid;
+      width: 100%;
+      max-width: 600px;
+      transition: all 0.3s ease-in-out;
+      caret-color: #d5ff40;
+      box-sizing: border-box;
+      padding: 1px;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      &:focus-visible {
+        outline: -webkit-focus-ring-color auto 0px !important;
+        border: none;
+        transition: all 0.3s ease-in-out;
+        border-bottom: #d5ff40 1px solid;
+      }
+    }
+  }
+  & .contact-form-button {
+    width: 100%;
+    height: 100%;
+    width: 240px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid #f9f9f9;
+    border-radius: 100px;
+    background: rgba($color: #000000, $alpha: 0);
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #dadada;
+    transition: all 0.2s ease-out;
+    & img {
+      transition: all 0.2s ease-out;
+      transform: rotate(0deg);
+      width: 25px;
+      height: 25px;
+    }
+    &:hover img {
+      transition: all 0.2s ease-out;
+      transform: translate(40%, 0%) rotate(-45deg);
+    }
+    &:hover {
+      transition: all 0.2s ease-out;
+      border: 2px solid #d5ff40;
+      cursor: pointer;
+      color: #d5ff40;
+    }
+  }
   & .form-title {
     font-size: 28px;
     font-weight: bold;

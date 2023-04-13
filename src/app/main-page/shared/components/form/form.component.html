@@ -1,61 +1,86 @@
-<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-  <div>
-    <label for="name">Ваше имя:</label>
-    <input type="text" id="name" formControlName="name" required />
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+  <div class="contact-form-item">
+    <div class="contact-form-label__group">
+      <label for="name">Ваше имя:</label>
+      <input type="text" id="name" formControlName="name" required />
+    </div>
+
     <div
+      [@errorAnimation]
       *ngIf="
         contactForm.get('name')?.invalid && contactForm.get('name')?.touched
       "
     >
-      <div *ngIf="contactForm.get('name')?.hasError('required')">
+      <div *ngIf="contactForm.get('name')?.hasError('required')" class="error">
         Заполните имя
       </div>
     </div>
   </div>
 
-  <div>
-    <label for="email">Email:</label>
-    <input type="email" id="email" formControlName="email" required />
+  <div class="contact-form-item">
+    <div class="contact-form-label__group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email" required />
+    </div>
+
     <div
+      [@errorAnimation]
       *ngIf="
         contactForm.get('email')?.invalid && contactForm.get('email')?.touched
       "
     >
-      <div *ngIf="contactForm.get('email')?.hasError('required')">
+      <div *ngIf="contactForm.get('email')?.hasError('required')" class="error">
         Email обязателен.
       </div>
-      <div *ngIf="contactForm.get('email')?.hasError('email')">
+      <div *ngIf="contactForm.get('email')?.hasError('email')" class="error">
         Не правильный формат Email.
       </div>
-      <div *ngIf="contactForm.get('email')?.hasError('invalidEmail')">
+      <div
+        *ngIf="contactForm.get('email')?.hasError('invalidEmail')"
+        class="error"
+      >
         Email должен содержать '@'.
       </div>
     </div>
   </div>
 
-  <div>
-    <label for="phone">Ваш телефон:</label>
-    <input
-      type="tel"
-      id="phone"
-      formControlName="phone"
-      required
-      pattern="^\d{10}$"
-      appPhoneMask
-    />
+  <div class="contact-form-item">
+    <div class="contact-form-label__group">
+      <label for="phone">Ваш телефон:</label>
+      <input
+        type="tel"
+        id="phone"
+        formControlName="phone"
+        required
+        pattern="^\d{10}$"
+        appPhoneMask
+      />
+    </div>
     <div
+      [@errorAnimation]
       *ngIf="
         contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched
       "
     >
-      <div *ngIf="contactForm.get('phone')?.hasError('required')">
+      <div *ngIf="contactForm.get('phone')?.hasError('required')" class="error">
         Телефон обязателен.
       </div>
-      <div *ngIf="contactForm.get('phone')?.hasError('pattern')">
+      <div *ngIf="contactForm.get('phone')?.hasError('pattern')" class="error">
         Не верный телефон.
       </div>
     </div>
   </div>
 
-  <button type="submit" [disabled]="!contactForm.valid">Отправить</button>
+  <button
+    type="submit"
+    [disabled]="!contactForm.valid"
+    class="contact-form-button"
+  >
+    Отправить
+    <img
+      src="assets/images/icons/arrow-circle-down.png"
+      width="50px"
+      height="50px"
+    />
+  </button>
 </form>

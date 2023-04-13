@@ -1,6 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate,
+} from '@angular/animations';
 
+export const errorAnimation = trigger('errorAnimation', [
+  state('void', style({ opacity: 0 })),
+  state('*', style({ opacity: 1 })),
+  transition('void <=> *', animate('300ms ease-in-out')),
+]);
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
