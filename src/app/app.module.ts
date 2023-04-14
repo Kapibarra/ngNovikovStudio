@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page/main-page.component';
@@ -36,6 +35,7 @@ import { CursorComponent } from './main-page/shared/components/cursor/cursor.com
 import { DialogDirective } from './main-page/shared/directives/dialog.directive';
 import { PhoneMaskDirective } from './main-page/shared/directives/phoneMask.directive';
 import { ServiceHeroComponent } from './main-page/services-page/shared/components/service-hero/service-hero.component';
+import { SmoothScrollService } from './main-page/shared/services/smoothScroll.service';
 
 @NgModule({
   declarations: [
@@ -64,7 +64,7 @@ import { ServiceHeroComponent } from './main-page/services-page/shared/component
     PhoneMaskDirective,
     ServiceHeroComponent,
   ],
-  providers: [CookieService, DialogDirective],
+  providers: [CookieService, DialogDirective, SmoothScrollService],
   bootstrap: [AppComponent],
   imports: [
     BrowserModule,

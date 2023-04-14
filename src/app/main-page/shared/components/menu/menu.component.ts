@@ -65,7 +65,8 @@ export class MenuComponent implements OnInit, AfterViewInit {
     }, 1000);
   }
   onSmoothScroll(target: string): void {
-    this.smoothScroll.smoothScroll(target);
+    console.log('target:', target);
+    this.scroller.scrollToAnchor(target);
     this.closeMenu();
   }
 }

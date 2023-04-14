@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class SmoothScrollService {
   smoothScroll(target: string) {
+    console.log('smoothScroll');
     const element = document.querySelector(target);
     if (!element) return;
 
@@ -17,6 +18,7 @@ export class SmoothScrollService {
     let startTime: number;
 
     function animate(currentTime: number) {
+      console.log('animate', currentTime, start, end);
       if (startTime === null) {
         startTime = currentTime;
       }
@@ -27,9 +29,10 @@ export class SmoothScrollService {
         end - start,
         duration
       );
+      console.log('scrollPosition', scrollPosition);
       window.scrollTo(0, scrollPosition);
       if (timeElapsed < duration) {
-        setTimeout(animate);
+        setTimeout(animate, 1000 / 60, performance.now());
       }
     }
 
