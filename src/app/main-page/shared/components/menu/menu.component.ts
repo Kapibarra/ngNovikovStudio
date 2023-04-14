@@ -14,6 +14,7 @@ import {
   transition,
   animate,
 } from '@angular/animations';
+import { SmoothScrollService } from '../../services/smoothScroll.service';
 
 export const slideInOutAnimation = trigger('slideInOutAnimation', [
   state(
@@ -44,7 +45,10 @@ export class MenuComponent implements OnInit, AfterViewInit {
   @Output() isActiveMenuChange = new EventEmitter<boolean>();
   currentYear!: number;
 
-  constructor(private scroller: ViewportScroller) {}
+  constructor(
+    private scroller: ViewportScroller,
+    private smoothScroll: SmoothScrollService
+  ) {}
 
   ngAfterViewInit(): void {}
 
@@ -59,5 +63,9 @@ export class MenuComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.scroller.scrollToAnchor('about');
     }, 1000);
+  }
+  onSmoothScroll(target: string): void {
+    this.smoothScroll.smoothScroll(target);
+    this.closeMenu();
   }
 }
