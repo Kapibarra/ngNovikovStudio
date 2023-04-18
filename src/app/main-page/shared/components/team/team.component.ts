@@ -7,6 +7,7 @@ import Swiper from 'swiper';
   styleUrls: ['./team.component.scss'],
 })
 export class TeamComponent implements OnInit {
+  public isFormOpen = false;
   constructor() {}
 
   ngOnInit(): void {
