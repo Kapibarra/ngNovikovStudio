@@ -19,7 +19,7 @@
         font-size: 80px;
         line-height: 100%;
         /* or 80px */
-        text-align: right;
+        text-align: left;
         letter-spacing: 1px;
         text-transform: uppercase;
         color: #ffffff;
@@ -27,7 +27,7 @@
       }
       & .service__content-img {
         display: block;
-        margin-left: auto;
+        margin-right: auto;
       }
     }
     & .service__description {
@@ -36,7 +36,7 @@
       gap: 10px;
       & .service__description-item {
         background: #d5ff40;
-        border-radius: 0px 20px 20px 0px;
+        border-radius: 20px 0px 0px 20px;
         width: 100%;
         max-width: 754px;
         box-sizing: border-box;
@@ -50,7 +50,7 @@
           transition: all 0.3s ease-in-out;
           cursor: pointer;
           background: #fafafa;
-          transform: translateX(-30px);
+          transform: translateX(30px);
         }
         & .description__item-title {
           display: flex;
