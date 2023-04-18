@@ -16,19 +16,22 @@ export class PortfolioComponent implements OnInit {
     },
     {
       title: ' Viper Official ',
-      description: ' КОРПОРАТИВНЫЙ САЙТ эксклюзивного импортера ',
+      description:
+        ' КОРПОРАТИВНЫЙ САЙТ эксклюзивного импортера поломоечных машин',
       link: 'https://viper-pro.ru/',
       imgUrl: 'assets/images/portfolio/viper.png',
     },
     {
       title: ' Sellsoft Technology ',
-      description: ' Сайт российской IT - компании ',
+      description:
+        ' Сайт российской IT - компании , разработчика программного обеспечения',
       link: 'https://viper-pro.ru/',
       imgUrl: 'assets/images/portfolio/sellsoft.png',
     },
     {
       title: ' ИНТЕРТЕХ ',
-      description: ' корпоративный Сайт российской IT - компании ',
+      description:
+        ' корпоративный Сайт одной из крупнейшей российских консалтинговых групп',
       link: 'https://Intertech.ru',
       imgUrl: 'assets/images/portfolio/intertech.png',
     },
@@ -40,13 +43,15 @@ export class PortfolioComponent implements OnInit {
     },
     {
       title: ' Fisio ',
-      description: 'платформа для настоящих спортсменов',
+      description:
+        'платформа для тех кто хочет быть в форме и оставаться мобильным',
       link: 'https://fisio.ru',
       imgUrl: 'assets/images/portfolio/fisio.png',
     },
     {
       title: ' MadStack Studio ',
-      description: 'Лендинг для студии разработки',
+      description:
+        'Лендинг для наших дорогих коллег, студии разработки и дизайна',
       link: 'https://madstack.ru',
       imgUrl: 'assets/images/portfolio/madstack.png',
     },
