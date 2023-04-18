@@ -44,3 +44,50 @@
   opacity: 1;
   background-color: #333;
 }
+
+.team__wrapper {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  margin-top: 160px;
+
+  & .team {
+    & .team__heading-title {
+      font-family: "Jura";
+      font-weight: 300;
+      font-size: 42px;
+      line-height: 100%;
+      /* or 80px */
+      width: 100%;
+      max-width: 1600px;
+      text-align: right;
+      letter-spacing: 1px;
+      text-transform: lowercase;
+      margin: 0 auto;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: flex-end;
+    }
+    & .team__content {
+      & .team__image {
+        opacity: 0.8;
+      }
+      & .team__title {
+        font-family: "Jost";
+        font-weight: 100;
+
+        font-size: 32px;
+        line-height: 100%;
+        text-align: left;
+        color: white;
+        max-width: 600px;
+        margin-right: auto;
+        margin-bottom: 120px;
+        margin-top: 40px;
+        /* or 80px */
+      }
+    }
+  }
+}
