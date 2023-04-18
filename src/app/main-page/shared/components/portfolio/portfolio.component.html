@@ -10,23 +10,27 @@
   </div>
 
   <div class="portfolio">
-    <a href="https://google.ru" target="_blank">
+    <a
+      href="{{ portfolioItem.link }}"
+      target="_blank"
+      *ngFor="let portfolioItem of portfolio"
+    >
       <div class="portfolio__item">
         <div class="item__inner-wrapper">
           <div class="portfolio__border"></div>
           <h3 class="portfolio__title">
             <img class="title-logo" src="assets/images/icons/logo-icon.png" />
-            VNUKOVO PREMIUM OUTLET
+            {{ portfolioItem.title }}
           </h3>
           <div class="portfolio__description">
-            КОРПОРАТИВНЫЙ САЙТ САМОГО ПОСЕЩАЕМОГО АУТЛЕТА
+            {{ portfolioItem.description }}
           </div>
           <app-primary-button-big
             [label]="'Смотреть сайт'"
           ></app-primary-button-big>
         </div>
         <div class="portfolio__image">
-          <img src="assets/images/portfolio/removebg.png" />
+          <img src="{{ portfolioItem.imgUrl }}" />
         </div>
       </div>
     </a>

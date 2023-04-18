@@ -18,7 +18,7 @@
     </ul>
   </div>
   <ul class="menu__contacts-list-routes">
-    <li><a routerLink="/">Главная</a></li>
+    <li><a routerLink="/" (click)="closeMenu()">Главная</a></li>
     <li (click)="onSmoothScroll('projects')"><a>Проекты</a></li>
     <li><a routerLink="service" (click)="closeMenu()">Цены</a></li>
     <li><a (click)="onSmoothScroll('contacts')">Контакты</a></li>

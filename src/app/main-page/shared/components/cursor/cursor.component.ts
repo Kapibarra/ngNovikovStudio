@@ -1,10 +1,4 @@
-import {
-  Component,
-  OnInit,
-  HostListener,
-  ElementRef,
-  ViewChild,
-} from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { fromEvent, interval } from 'rxjs';
 import { throttle } from 'rxjs/operators';
 @Component({
