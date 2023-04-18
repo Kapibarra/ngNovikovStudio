@@ -17,6 +17,6 @@ export class LoaderComponent implements OnInit {
     let a = this;
     setTimeout(() => {
       this.showLoader = false;
-    }, Math.floor(Math.random() * 33000));
+    }, Math.floor(Math.random() * 3000));
   }
 }

@@ -5,8 +5,10 @@
   transform: translate(-50%, -50%);
   width: 100%;
   max-width: 400px;
-  height: 300px;
   background-color: #111111;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
   border: 1px solid #d5ff40;
   border-radius: 10px;
   // box-shadow: 2.8px 2.8px 2.2px rgba(#f55b4e, 0.02),
@@ -17,7 +19,7 @@
   //   100px 100px 80px rgba(#f55b4e, 0.07);
   padding: 20px;
   padding-top: 40px;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -27,6 +29,9 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  &:hover {
+    cursor: pointer;
+  }
 }
 .popup.show {
   display: block;
@@ -234,4 +239,10 @@
       background-color: #45077c;
     }
   }
+}
+.form__logo {
+  width: 100%;
+  max-width: 189px;
+  margin-top: 30px;
+  margin: 0 auto;
 }
