@@ -37,6 +37,7 @@ import { PhoneMaskDirective } from './main-page/shared/directives/phoneMask.dire
 import { ServiceHeroComponent } from './main-page/services-page/shared/components/service-hero/service-hero.component';
 import { SmoothScrollService } from './main-page/shared/services/smoothScroll.service';
 import { ServicesBannerComponent } from './main-page/services-page/shared/components/services-banner/services-banner.component';
+import { InViewportDirective } from './main-page/shared/directives/viewport.directive';
 
 @NgModule({
   declarations: [
@@ -65,8 +66,14 @@ import { ServicesBannerComponent } from './main-page/services-page/shared/compon
     PhoneMaskDirective,
     ServiceHeroComponent,
     ServicesBannerComponent,
+    InViewportDirective,
   ],
-  providers: [CookieService, DialogDirective, SmoothScrollService],
+  providers: [
+    CookieService,
+    DialogDirective,
+    SmoothScrollService,
+    InViewportDirective,
+  ],
   bootstrap: [AppComponent],
   imports: [
     BrowserModule,

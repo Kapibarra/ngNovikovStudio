@@ -59,6 +59,7 @@
       max-width: 1600px;
       margin: 0 auto;
       gap: 50px;
+      overflow-x: hidden;
       & .portfolio__image img {
         transition: all 0.2s ease-in-out;
         opacity: 0;
@@ -72,32 +73,56 @@
       }
       &:hover .portfolio__title {
         transition: all 0.2s ease-in-out;
-        color: #d5ff40 !important;
+        background: linear-gradient(
+          -90deg,
+          #d5ff40 0%,
+          #d5ff40 30%,
+          #f55b4e 70%,
+          #f55b4e 100%
+        );
+        background-size: 150% 150%;
+        animation: gradient 10s ease infinite;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+        letter-spacing: -0.0569em;
+        @keyframes gradient {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 20%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
       }
       & .portfolio__image {
-        width: 100%;
         max-width: 560px;
-        max-height: 315px;
+        width: 100%;
+        min-height: 315px;
         background: linear-gradient(-45deg, #d5ff40, #8b67f3, #f66050);
         background-size: 400% 400%;
         animation: gradient 7s ease infinite;
-        opacity: 0;
-        transition: all 0.2 ease-in-out;
+        transition: all 2.2 ease-in-out;
+        transform: translateX(560px);
+        opacity: 1;
         & img {
-          opacity: 0;
           width: 100%;
           max-width: 560px;
           max-height: 315px;
           transition: all 0.2s ease-in-out;
+          opacity: 1;
         }
       }
       &:hover .portfolio__image {
         transition: all 0.2s ease-in-out;
-        opacity: 1;
+        transform: translateX(0px);
       }
       &:hover .portfolio__image img {
         transition: all 0.2s ease-in-out;
-        opacity: 1;
       }
       & .item__inner-wrapper {
         display: flex;

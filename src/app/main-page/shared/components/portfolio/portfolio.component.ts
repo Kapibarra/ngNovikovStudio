@@ -1,10 +1,16 @@
 import { Portfolio } from './../../models/portfolio';
-import { Component, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnInit,
+  Renderer2,
+} from '@angular/core';
 
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PortfolioComponent implements OnInit {
   portfolio: Portfolio[] = [
@@ -56,7 +62,10 @@ export class PortfolioComponent implements OnInit {
       imgUrl: 'assets/images/portfolio/madstack.png',
     },
   ];
-  constructor() {}
+  constructor(private readonly renderer: Renderer2) {}
 
   ngOnInit(): void {}
+  onViewportChange() {
+    console.log('viewport woooohooooooo!');
+  }
 }
