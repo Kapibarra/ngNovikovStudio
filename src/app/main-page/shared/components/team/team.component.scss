@@ -1,57 +1,24 @@
-.swiper-container {
-  width: 100%;
-  height: 400px;
-  position: relative;
-  overflow: hidden;
+.team__wrapper:hover svg {
+  stroke-dashoffset: 0;
+  animation-play-state: running;
 }
 
-.swiper-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
+@keyframes draw-hover {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
-
-.swiper-slide {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 5rem;
-  background-color: #f8f8f8;
-  color: #333;
-}
-
-.swiper-pagination {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
-  border-radius: 50%;
-  background-color: #ccc;
-  opacity: 0.8;
-  cursor: pointer;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.swiper-pagination-bullet-active {
-  opacity: 1;
-  background-color: #333;
-}
-
 .team__wrapper {
   width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
-  margin-top: 160px;
+  position: relative;
 
   & .team {
+    max-width: 1600px;
+    margin: 0 auto;
+    margin-top: 160px;
     & .team__heading-title {
       font-family: "Jura";
       font-weight: 300;
@@ -89,5 +56,24 @@
         /* or 80px */
       }
     }
+  }
+}
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: draw 2s ease forwards;
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 2000;
+  }
+  to {
+    stroke-dashoffset: 0;
   }
 }

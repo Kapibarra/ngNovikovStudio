@@ -36,6 +36,7 @@ import { DialogDirective } from './main-page/shared/directives/dialog.directive'
 import { PhoneMaskDirective } from './main-page/shared/directives/phoneMask.directive';
 import { ServiceHeroComponent } from './main-page/services-page/shared/components/service-hero/service-hero.component';
 import { SmoothScrollService } from './main-page/shared/services/smoothScroll.service';
+import { ServicesBannerComponent } from './main-page/services-page/shared/components/services-banner/services-banner.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { SmoothScrollService } from './main-page/shared/services/smoothScroll.se
     DialogDirective,
     PhoneMaskDirective,
     ServiceHeroComponent,
+    ServicesBannerComponent,
   ],
   providers: [CookieService, DialogDirective, SmoothScrollService],
   bootstrap: [AppComponent],
