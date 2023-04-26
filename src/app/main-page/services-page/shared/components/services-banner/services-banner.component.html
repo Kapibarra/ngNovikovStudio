@@ -14,20 +14,28 @@
         <path
           d="M299.175 82.897C664.197-22.49 319.645-19.185 30.993 59.737c-51.34 14.036-78.064 60.684 311.515 54.002 560.074-9.607 462.987 20.77 432.978 30.117-169.18 49.014-29.579 61.099 72.514 60.087"
           stroke="#d5ff40"
-          stroke-width="1"
+          stroke-width="2.3"
           stroke-linecap="round"
           stroke-linejoin="round"
           style="stroke-dasharray: 1736; stroke-dashoffset: 0"
         ></path>
       </svg>
     </h2>
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
+    <div class="services__banner-slider">
+      <div class="swiper-container">
+        <swiper [config]="config">
+          <ng-template swiperSlide *ngFor="let slide of bannerSlider">
+            <h3 class="slide__title">
+              <img
+                class="slide__title-logo"
+                src="assets/images/icons/logo-icon.png"
+              />
+              {{ slide.title }}
+            </h3>
+            <img src="{{ slide.imgUrl }}" alt="slide" class="slide__image" />
+          </ng-template>
+        </swiper>
       </div>
-      <div class="swiper-pagination"></div>
     </div>
   </div>
 </div>
