@@ -74,6 +74,13 @@
       max-width: 1400px;
       margin-block-start: 150px !important;
       margin-block-end: 150px !important;
+      @media screen and (max-width: 968px) {
+        font-size: 64px;
+        line-height: 50px;
+        & svg {
+          height: 60px;
+        }
+      }
     }
     & .services__banner-slider {
       width: 100%;

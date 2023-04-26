@@ -13,6 +13,11 @@
     letter-spacing: -0.05em;
     color: #ffffff;
     max-width: 1200px;
+    margin-bottom: 15px;
+    @media screen and (max-width: 968px) {
+      font-size: 64px;
+      line-height: 40px;
+    }
   }
   & .service__hero-subtitle {
     font-family: "Jura";
