@@ -6,6 +6,7 @@
   height: 100vh;
   width: 100vw;
   background-color: #0f0f0f;
+  overflow-y: scroll;
 }
 .menu__wrapper .active {
   z-index: 10;
@@ -14,7 +15,7 @@
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
-  margin-top: 80px;
+  margin-top: 30px;
   padding-left: 20px;
   box-sizing: border-box;
 
@@ -92,8 +93,9 @@
     a {
       position: relative;
       display: block;
-      margin: 20px 0;
+      margin: 10px 0;
       padding: 10px 20px;
+      padding-top: 0px;
       text-decoration: none;
       color: #dadada;
       font-family: "Jura";
