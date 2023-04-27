@@ -16,14 +16,11 @@ export class InViewportDirective implements OnDestroy {
   constructor(private readonly elementRef: ElementRef) {}
 
   ngOnInit() {
-    this.observer = new IntersectionObserver(
-      this.handleIntersection.bind(this),
-      {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.7,
-      }
-    );
+    this.observer = new IntersectionObserver(this.onIntersection.bind(this), {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.8,
+    });
     this.observer.observe(this.elementRef.nativeElement);
   }
 
@@ -32,15 +29,16 @@ export class InViewportDirective implements OnDestroy {
     this.observer.disconnect();
   }
 
-  private handleIntersection(
-    entries: IntersectionObserverEntry[],
-    _observer: IntersectionObserver
-  ) {
-    entries.forEach((entry: IntersectionObserverEntry) => {
-      if (entry.isIntersecting) {
-        this.inViewport.emit(true);
-      } else {
-        this.inViewport.emit(false);
+  onIntersection(entries: IntersectionObserverEntry[]): void {
+    entries.forEach((entry) => {
+      if (entry instanceof IntersectionObserverEntry) {
+        const target = entry.target as HTMLElement;
+        if (entry.isIntersecting) {
+          target.classList.add('inViewport');
+        }
+        // else {
+        //   target.classList.remove('inViewport');
+        // }
       }
     });
   }
