@@ -65,7 +65,13 @@ export class PortfolioComponent implements OnInit {
   constructor(private readonly renderer: Renderer2) {}
 
   ngOnInit(): void {}
-  onViewportChange() {
-    console.log('viewport woooohooooooo!');
+
+  onViewportChange(entries: IntersectionObserverEntry[]) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const target = entry.target as HTMLElement;
+        target.classList.add('inViewport');
+      }
+    });
   }
 }

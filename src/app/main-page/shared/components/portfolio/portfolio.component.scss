@@ -50,6 +50,53 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+    /*Styles With Viewport*/
+    & .inViewport {
+      & .portfolio__item {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1600px;
+        margin: 0 auto;
+        gap: 50px;
+        overflow-x: hidden;
+        transition: all 0.2s ease-in-out;
+        & .portfolio__title {
+          transition: all 0.2s ease-in-out;
+          background: linear-gradient(
+            -90deg,
+            #d5ff40 0%,
+            #d5ff40 30%,
+            #f55b4e 70%,
+            #f55b4e 100%
+          );
+          background-size: 150% 150%;
+          animation: gradient 10s ease infinite;
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-fill-color: transparent;
+          letter-spacing: -0.0569em;
+          @keyframes gradient {
+            0% {
+              background-position: 0% 50%;
+            }
+            50% {
+              background-position: 100% 20%;
+            }
+            100% {
+              background-position: 0% 50%;
+            }
+          }
+        }
+        & .portfolio__image {
+          transform: translateX(0px);
+        }
+      }
+    }
+    /*Styles Without Viewport*/
     & .portfolio__item {
       display: flex;
       flex-direction: row;
@@ -60,6 +107,7 @@
       margin: 0 auto;
       gap: 50px;
       overflow-x: hidden;
+      transition: all 0.2s ease-in-out;
       & .portfolio__image img {
         transition: all 0.2s ease-in-out;
         opacity: 0;
@@ -69,8 +117,10 @@
         opacity: 0;
       }
       &:hover {
+        transition: all 0.2s ease-in-out;
         cursor: pointer;
       }
+
       &:hover .portfolio__title {
         transition: all 0.2s ease-in-out;
         background: linear-gradient(
