@@ -29,6 +29,14 @@ export class ServicesBannerComponent implements OnInit {
       imgUrl: 'assets/images/portfolio/viper.png',
     },
     {
+      title: ' briar ',
+      imgUrl: 'assets/images/portfolio/briar.png',
+    },
+    {
+      title: ' cellsoft ',
+      imgUrl: 'assets/images/portfolio/cellsoft.png',
+    },
+    {
       title: ' fisio ',
       imgUrl: 'assets/images/portfolio/fisio.png',
     },
@@ -43,6 +51,10 @@ export class ServicesBannerComponent implements OnInit {
     {
       title: ' kama matricia ',
       imgUrl: 'assets/images/portfolio/kama.png',
+    },
+    {
+      title: ' bits.balance ',
+      imgUrl: 'assets/images/portfolio/bits.png',
     },
   ];
 
