@@ -16,6 +16,9 @@ export class InViewportDirective implements OnDestroy {
   constructor(private readonly elementRef: ElementRef) {}
 
   ngOnInit() {
+    if (window.innerWidth < 968) {
+      /* Обсервер сюда */
+    }
     this.observer = new IntersectionObserver(this.onIntersection.bind(this), {
       root: null,
       rootMargin: '0px',

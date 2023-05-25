@@ -28,22 +28,21 @@ export class PortfolioComponent implements OnInit {
       imgUrl: 'assets/images/portfolio/viper.png',
     },
     {
-      title: ' Sellsoft Technology ',
+      title: ' БИТС.БАЛАНС  ',
       description:
         ' Сайт российской IT - компании , разработчика программного обеспечения',
-      link: 'https://viper-pro.ru/',
-      imgUrl: 'assets/images/portfolio/sellsoft.png',
+      link: 'https://bitsis.ru/',
+      imgUrl: 'assets/images/portfolio/bits.png',
     },
     {
-      title: ' ИНТЕРТЕХ ',
-      description:
-        ' корпоративный Сайт одной из крупнейшей российских консалтинговых групп',
-      link: 'https://Intertech.ru',
-      imgUrl: 'assets/images/portfolio/intertech.png',
+      title: ' mythai-spa ',
+      description: ' мультилендинг для сети спа салонов в одинцово ',
+      link: 'https://mythai-spa.ru/',
+      imgUrl: 'assets/images/portfolio/thai.png',
     },
     {
       title: ' MosDisplay ',
-      description: 'сайт и личный кабинет ремонта Apple и MAcbook',
+      description: 'сайт и личный кабинет ремонта Apple и Macbook',
       link: 'https://mosdisplay.ru',
       imgUrl: 'assets/images/portfolio/mosdisplay.png',
     },
@@ -55,11 +54,10 @@ export class PortfolioComponent implements OnInit {
       imgUrl: 'assets/images/portfolio/fisio.png',
     },
     {
-      title: ' MadStack Studio ',
-      description:
-        'Лендинг для наших дорогих коллег, студии разработки и дизайна',
-      link: 'https://madstack.ru',
-      imgUrl: 'assets/images/portfolio/madstack.png',
+      title: ' gastropub briar ',
+      description: 'заслуживает 3 звезды Michlen, ну очень вкусно!',
+      link: 'https://briargastrobar.ru/',
+      imgUrl: 'assets/images/portfolio/briar.png',
     },
   ];
   constructor(private readonly renderer: Renderer2) {}
