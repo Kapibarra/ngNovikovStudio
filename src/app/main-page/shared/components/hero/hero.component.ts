@@ -23,6 +23,16 @@ export class HeroComponent implements OnInit {
       delay: 5000,
       disableOnInteraction: false,
     },
+    breakpoints: {
+      0: {
+        slidesPerView: 1, // 2 slides per view when screen width is 768px or greater
+      },
+      428: {
+        slidesPerView: 2, // 2 slides per view when screen width is 768px or greater
+      },
+
+      // You can add more breakpoints as needed
+    },
   };
   constructor() {}
   ngOnInit(): void {}

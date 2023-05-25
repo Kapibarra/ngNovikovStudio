@@ -79,6 +79,7 @@
           -webkit-text-fill-color: transparent;
           text-fill-color: transparent;
           letter-spacing: -0.0569em;
+
           @keyframes gradient {
             0% {
               background-position: 0% 50%;
@@ -93,6 +94,12 @@
         }
         & .portfolio__image {
           transform: translateX(0px);
+          @media (max-width: 428px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
         }
       }
     }
@@ -204,6 +211,11 @@
 
           color: #ffffff;
           gap: 40px;
+          @media (max-width: 428px) {
+            font-size: 42px;
+            line-height: 80%;
+            align-items: center;
+          }
           & .title-logo {
           }
         }

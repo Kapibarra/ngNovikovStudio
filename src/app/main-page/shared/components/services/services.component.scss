@@ -24,6 +24,11 @@
         text-transform: uppercase;
         color: #ffffff;
         margin-top: 40px;
+        @media (max-width: 428px) {
+          font-size: 42px;
+          line-height: 80%;
+          align-items: center;
+        }
       }
       & .service__content-img {
         display: block;

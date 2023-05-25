@@ -39,7 +39,12 @@
     }
     & .team__content {
       & .team__image {
-        opacity: 0.8;
+        opacity: 1;
+        @media (max-width: 428px) {
+          width: 100%;
+          max-width: 320px;
+          margin: 0 auto;
+        }
       }
       & .team__title {
         font-family: "Jost";
