@@ -15,28 +15,34 @@
   width: 100%;
   position: relative;
   width: 100%;
-  max-width: 1600px;
+  max-width: 1400px;
+  border-radius: 40px;
+  box-sizing: border-box;
+  padding: 80px;
+  background-color: #1b1b1b;
   margin: 0 auto;
   & .team {
-    max-width: 1600px;
+    max-width: 1400px;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
     margin-top: 160px;
     & .team__heading-title {
       font-family: "days-one";
       font-weight: 300;
       font-size: 42px;
-      line-height: 100%;
+      line-height: 90%;
       /* or 80px */
       width: 100%;
       max-width: 1600px;
       text-align: right;
       letter-spacing: 1px;
-      text-transform: lowercase;
       margin: 0 auto;
       color: #ffffff;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
+      margin-bottom: 40px;
       align-items: flex-end;
     }
     & .team__content {
@@ -49,9 +55,8 @@
         }
       }
       & .team__title {
-        font-family: "Jost";
-        font-weight: 200;
-
+        font-family: "commissioner-2";
+        font-weight: 100;
         font-size: 32px;
         line-height: 100%;
         text-align: left;
@@ -68,9 +73,9 @@
 svg {
   position: absolute;
   top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
+  left: 2%;
+  z-index: 1;
+  width: 96%;
   height: 100%;
   stroke-dasharray: 2000;
   stroke-dashoffset: 2000;

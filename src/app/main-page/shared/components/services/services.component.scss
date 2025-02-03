@@ -1,25 +1,34 @@
 .service__wrapper {
   width: 100%;
-  max-width: 1600px;
+  max-width: 1400px;
   margin: 0 auto;
+  border-radius: 40px;
+  box-sizing: border-box;
+  padding: 42px;
+  background-color: #1b1b1b;
   margin-top: 160px;
   & .service {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
     gap: 20px;
     & .service__title {
       width: 100%;
-      max-width: 650px;
+      max-width: 450px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       & .service__title-text {
-        font-family: "Jost";
+        font-family: "days-one";
         font-style: normal;
+        font-weight: 600;
         font-weight: 900;
-        font-size: 80px;
-        line-height: 100%;
+        font-size: 42px;
+        line-height: 90%;
         /* or 80px */
-        text-align: left;
+        text-align: center;
         letter-spacing: 1px;
         text-transform: uppercase;
         color: #ffffff;
@@ -32,7 +41,7 @@
       }
       & .service__content-img {
         display: block;
-        margin-right: auto;
+        margin-top: 20px;
       }
     }
     & .service__description {
@@ -40,14 +49,16 @@
       flex-direction: column;
       gap: 10px;
       & .service__description-item {
-        background: #d5ff40;
         border-radius: 20px 0px 0px 20px;
         width: 100%;
         max-width: 754px;
         box-sizing: border-box;
-        padding: 48px;
+        padding: 32px;
         display: flex;
         flex-direction: column;
+        border-radius: 40px;
+        box-sizing: border-box;
+        background: #d5ff40;
         gap: 18px;
         height: 100%;
         transition: all 0.3s ease-in-out;
@@ -55,7 +66,7 @@
           transition: all 0.3s ease-in-out;
           cursor: pointer;
           background: #fafafa;
-          transform: translateX(30px);
+          transform: translateX(40px);
         }
         & .description__item-title {
           display: flex;
@@ -73,9 +84,9 @@
           color: #000000;
         }
         & .description__item-text {
-          font-family: "days-one";
-          font-style: normal;
-          font-weight: 600;
+          font-family: "commissioner-2";
+          font-weight: 300;
+          text-align: left;
           font-size: 20px;
           line-height: 28px;
           /* or 31px */

@@ -1,6 +1,10 @@
 .contacts {
   width: 100%;
-  max-width: 1600px;
+  max-width: 1400px;
+  border-radius: 40px;
+  box-sizing: border-box;
+  padding: 80px;
+  background-color: #1b1b1b;
   margin: 0 auto;
   margin-top: 120px;
   display: flex;
@@ -15,15 +19,52 @@
     /* or 80px */
   }
   & .contacts__subtitle {
-    font-family: "Jost";
-    font-weight: 300;
-    font-size: 32px;
+    font-family: "commissioner-2";
+    font-weight: 100;
+    font-size: 24px;
     line-height: 100%;
     text-align: right;
     color: white;
     max-width: 800px;
     margin-left: auto;
     /* or 80px */
+  }
+  & .contacts__inner-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    & .contacts__items {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      & .contacts__item {
+        background: #0f0f0f;
+        color: #d5ff40;
+        font-family: "days-one";
+        font-style: normal;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 292px;
+        max-width: 400px;
+        height: 292px;
+        border-radius: 30px;
+        box-sizing: border-box;
+        padding: 32px;
+        border: 1px solid #0f0f0f;
+        box-shadow: 0.9px 1.3px 5.3px rgba(#d5ff40, 0),
+          2.9px 4.2px 17.9px rgba(#d5ff40, 0), 13px 19px 80px rgba(#d5ff40, 0);
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          transition: all 0.3s ease-in-out;
+          border: 1px solid rgba($color: #d5ff40, $alpha: 0.28);
+          box-shadow: 0.9px 1.3px 5.3px rgba(#d5ff40, 0.028),
+            2.9px 4.2px 17.9px rgba(#d5ff40, 0.042),
+            13px 19px 80px rgba(#d5ff40, 0.07);
+        }
+      }
+    }
   }
   & .contacts__phone {
     display: flex;
@@ -41,7 +82,7 @@
     font-family: "days-one";
     font-style: normal;
     font-weight: 300;
-    font-size: 42px;
+    font-size: 16px;
     line-height: 42px;
     color: #f55b4e;
     text-align: center;
@@ -51,8 +92,6 @@
       cursor: pointer;
       transition: all 0.3s ease-in-out;
       color: #f55b4e;
-      text-shadow: #f55b4e 0px 0px 10px, #f55b4e 0px 0px 20px,
-        #f55b4e 0px 0px 30px, #f55b4e 0px 0px 40px;
     }
   }
 }

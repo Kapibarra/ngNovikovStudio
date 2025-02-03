@@ -1,8 +1,15 @@
 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+  <div class="form__title">Есть проект? Давайте обсудим!</div>
   <div class="contact-form-item">
     <div class="contact-form-label__group">
-      <label for="name">Ваше имя:</label>
-      <input type="text" id="name" formControlName="name" required />
+      <!-- <label for="name">Ваше имя:</label> -->
+      <input
+        type="text"
+        id="name"
+        formControlName="name"
+        required
+        placeholder="Ваше имя"
+      />
     </div>
 
     <div
@@ -19,8 +26,14 @@
 
   <div class="contact-form-item">
     <div class="contact-form-label__group">
-      <label for="email">Email:</label>
-      <input type="email" id="email" formControlName="email" required />
+      <!-- <label for="email">Email:</label> -->
+      <input
+        type="email"
+        id="email"
+        formControlName="email"
+        required
+        placeholder="Почта"
+      />
     </div>
 
     <div
@@ -39,14 +52,14 @@
         *ngIf="contactForm.get('email')?.hasError('invalidEmail')"
         class="error"
       >
-        Email должен содержать '@'.
+        Email должен содержать '&#64;'.
       </div>
     </div>
   </div>
 
   <div class="contact-form-item">
     <div class="contact-form-label__group">
-      <label for="phone">Ваш телефон:</label>
+      <!-- <label for="phone">Ваш телефон:</label> -->
       <input
         type="tel"
         id="phone"
@@ -54,6 +67,7 @@
         required
         pattern="^\d{10}$"
         appPhoneMask
+        placeholder="Номер телефона"
       />
     </div>
     <div
@@ -83,4 +97,5 @@
       height="50px"
     />
   </button>
+  <p>Нажимая на кнопку я даю согласие на обработку персональных данных</p>
 </form>

@@ -1,23 +1,52 @@
 <div class="contacts__wrapper" id="contacts">
   <div class="contacts">
     <h2 class="contacts__title">
-      <span class="highlighted">наши</span> контакты
+      <span class="highlighted">Связаться</span> с нами
     </h2>
 
     <div class="contacts__subtitle">
-      наши проекты начинаются с глубокого понимания того, что важно именно
-      <span class="highlighted">вам</span>
+      Наши проекты начинаются с глубокого понимания того, что важно именно
+      <span class="highlighted">Вам</span>
     </div>
-    <div class="contacts__email">
-      <a class="contacts__link-item" href="mailto:{{ contactsEmail }}">{{
-        contactsEmail
-      }}</a>
+
+    <div class="contacts__inner-wrapper">
+      <app-form></app-form>
+      <div class="contacts__items">
+        <div class="contacts__item">
+          <div class="contacts__phone">
+            <a
+              class="contacts__link-item"
+              href="tel:{{ formattedPhoneNumber }}"
+              >{{ phoneNumber }}</a
+            >
+          </div>
+        </div>
+        <div class="contacts__item">
+          <div class="contacts__email">
+            <a class="contacts__link-item" href="mailto:{{ contactsEmail }}">{{
+              contactsEmail
+            }}</a>
+          </div>
+        </div>
+      </div>
+      <div class="contacts__items">
+        <div class="contacts__item">
+          <div class="contacts__phone">
+            <a
+              class="contacts__link-item"
+              href="tel:{{ formattedPhoneNumber }}"
+              >{{ phoneNumber }}</a
+            >
+          </div>
+        </div>
+        <div class="contacts__item">
+          <div class="contacts__email">
+            <a class="contacts__link-item" href="mailto:{{ contactsEmail }}">{{
+              contactsEmail
+            }}</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="contacts__phone">
-      <a class="contacts__link-item" href="tel:{{ formattedPhoneNumber }}">{{
-        phoneNumber
-      }}</a>
-    </div>
-    <app-form></app-form>
   </div>
 </div>
