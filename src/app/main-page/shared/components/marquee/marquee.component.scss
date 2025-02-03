@@ -4,6 +4,7 @@ The juicy stuff
 .marquee {
   display: flex;
   overflow: hidden;
+  justify-content: center;
   gap: 1rem;
   font-size: 64px;
   line-height: 64px;

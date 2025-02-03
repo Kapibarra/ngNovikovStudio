@@ -29,7 +29,7 @@
     gap: 40px;
     & .contacts__list-item {
       & a {
-        font-family: "Jura";
+        font-family: "days-one";
         font-weight: 300;
         font-size: 22px;
         line-height: 100%;
@@ -58,7 +58,7 @@
   flex-direction: column;
   gap: 20px;
   & li {
-    font-family: "Jura";
+    font-family: "days-one";
     font-weight: 300;
     font-size: 14px;
     line-height: 100%;
@@ -67,7 +67,7 @@
     text-shadow: none;
   }
   & a {
-    font-family: "Jura";
+    font-family: "days-one";
     font-weight: 300;
     font-size: 22px;
     line-height: 100%;
@@ -78,8 +78,6 @@
       cursor: pointer;
       transition: all 0.3s ease-in-out;
       color: #f55b4e;
-      text-shadow: #f55b4e 0px 0px 10px, #f55b4e 0px 0px 20px,
-        #f55b4e 0px 0px 30px, #f55b4e 0px 0px 40px;
     }
   }
 }
@@ -98,12 +96,11 @@
       display: block;
       margin: 10px 0;
       padding: 10px 20px;
-      padding-top: 0px;
       text-decoration: none;
-      color: #dadada;
-      font-family: "Jura";
+      color: #ffffff;
+      font-family: "days-one";
       font-weight: 300;
-      font-size: 60px;
+      font-size: 42px;
       line-height: 100%;
       transition: 0.5s;
       z-index: 1;
@@ -114,8 +111,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        border-top: 1px solid rgba($color: #d5ff40, $alpha: 0.5);
-        border-bottom: 1px solid rgba($color: #d5ff40, $alpha: 0.5);
+        border-top: 1px solid rgba($color: #d5ff40, $alpha: 0.3);
+        border-bottom: 1px solid rgba($color: #d5ff40, $alpha: 0.3);
         transform: scaleY(2);
         opacity: 0;
         transition: 0.3s;

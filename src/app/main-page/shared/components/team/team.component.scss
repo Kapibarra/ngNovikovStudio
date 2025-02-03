@@ -14,13 +14,15 @@
 .team__wrapper {
   width: 100%;
   position: relative;
-
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
   & .team {
     max-width: 1600px;
     margin: 0 auto;
     margin-top: 160px;
     & .team__heading-title {
-      font-family: "Jura";
+      font-family: "days-one";
       font-weight: 300;
       font-size: 42px;
       line-height: 100%;

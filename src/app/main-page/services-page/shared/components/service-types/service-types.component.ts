@@ -14,7 +14,7 @@ export class ServiceTypesComponent implements OnInit {
       number: 1,
       description:
         'подойдет, если вам нужно продвижение конкретной услуги или товара, идеально ложится с связке с Яндекс директ',
-      price: 15000,
+      price: 35000,
       list: [
         {
           listItem: 'Проработка концепции дизайна',
@@ -32,7 +32,7 @@ export class ServiceTypesComponent implements OnInit {
       number: 2,
       description:
         'Разработка и поддержка интернет-магазинов любой сложности. Интеграция с платежными системами и системами управления складом.',
-      price: 25000,
+      price: 55000,
       list: [
         {
           listItem: 'Разработка дизайна сайта',
@@ -53,7 +53,7 @@ export class ServiceTypesComponent implements OnInit {
       number: 3,
       description:
         'Разработка и создание сайтов на платформе Тильда. Адаптивный дизайн и высокая скорость загрузки.',
-      price: 12000,
+      price: 30000,
       list: [
         {
           listItem: 'Разработка дизайна сайта',
@@ -74,7 +74,7 @@ export class ServiceTypesComponent implements OnInit {
       number: 4,
       description:
         'Настройка контекстной рекламы для максимального эффекта и оптимизации расходов',
-      price: 6000,
+      price: 8000,
       list: [
         {
           listItem: 'Выбор ключевых запросов',

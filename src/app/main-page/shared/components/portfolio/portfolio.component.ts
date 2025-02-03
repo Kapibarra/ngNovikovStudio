@@ -15,7 +15,7 @@ import {
 export class PortfolioComponent implements OnInit {
   portfolio: Portfolio[] = [
     {
-      title: ' VNUKOVO PREMIUM OUTLET ',
+      title: ' VNUKOVO OUTLET',
       description: ' КОРПОРАТИВНЫЙ САЙТ САМОГО ПОСЕЩАЕМОГО АУТЛЕТА ',
       link: 'https://vnukovo-premium-outlet.ru/',
       imgUrl: 'assets/images/portfolio/vnukovo.png',

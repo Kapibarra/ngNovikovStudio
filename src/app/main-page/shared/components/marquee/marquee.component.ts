@@ -28,6 +28,10 @@ export class MarqueeComponent implements AfterViewInit {
     parentSelector.insertAdjacentHTML('beforeend', clone);
     parentSelector.insertAdjacentHTML('beforeend', clone);
     parentSelector.insertAdjacentHTML('beforeend', clone);
+    parentSelector.insertAdjacentHTML('beforeend', clone);
+    parentSelector.insertAdjacentHTML('beforeend', clone);
+    parentSelector.insertAdjacentHTML('beforeend', clone);
+    parentSelector.insertAdjacentHTML('beforeend', clone);
 
     setInterval(function () {
       firstElement.style.marginLeft = `-${i}px`;

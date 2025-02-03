@@ -1,6 +1,6 @@
 //Fonts//
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=days-one:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&display=swap");
 @font-face {
   font-family: "Neue Machina";
@@ -90,6 +90,18 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "days-one";
+  src: url("assets/fonts/DaysOne-Regular.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "commissioner-2";
+  src: url("assets/fonts/Commissioner-VariableFont_wght.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
 @import "swiper/css";
 @import "swiper/css/navigation";
 @import "swiper/css/pagination";
@@ -277,7 +289,7 @@ canvas {
   letter-spacing: -0.0369em;
 }
 .highlighted-pink {
-  font-family: "Jura";
+  font-family: "days-one";
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
