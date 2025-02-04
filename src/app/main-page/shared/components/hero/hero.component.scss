@@ -374,6 +374,9 @@
         box-sizing: border-box;
         padding: 32px;
         cursor: pointer;
+        & .hero__item-img {
+          max-width: 340px;
+        }
       }
       & .hero__button {
         width: 100%;

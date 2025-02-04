@@ -38,6 +38,7 @@ import { ServiceHeroComponent } from './main-page/services-page/shared/component
 import { SmoothScrollService } from './main-page/shared/services/smoothScroll.service';
 import { ServicesBannerComponent } from './main-page/services-page/shared/components/services-banner/services-banner.component';
 import { InViewportDirective } from './main-page/shared/directives/viewport.directive';
+import { VerticalSliderComponent } from './main-page/shared/components/vertical-slider/vertical-slider.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { InViewportDirective } from './main-page/shared/directives/viewport.dire
     ServiceHeroComponent,
     ServicesBannerComponent,
     InViewportDirective,
+    VerticalSliderComponent,
   ],
   providers: [
     CookieService,
