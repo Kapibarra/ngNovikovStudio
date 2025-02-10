@@ -361,6 +361,18 @@
         font-family: "days-one";
         font-style: normal;
         font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        & img {
+          width: 100%;
+          max-width: 1176px;
+          border-radius: 16px;
+          border: 1px solid #d5d5d5;
+          margin-bottom: 16px;
+          max-height: 100px;
+          object-fit: cover;
+          object-position: 0px -30px;
+        }
       }
       & .test-hero__item-xs {
         background: #0f0f0f;

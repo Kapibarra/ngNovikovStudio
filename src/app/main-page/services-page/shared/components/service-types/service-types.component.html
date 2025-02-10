@@ -1,7 +1,7 @@
 <div class="serviceTypes__wrapper">
   <div class="serviceTypes__title-wrapper">
     <div class="serviceTypes__title-header">
-      наши <span class="highlighted"> услуги</span>
+      Наши <span class="highlighted"> услуги</span>
     </div>
   </div>
   <div
@@ -9,23 +9,34 @@
     *ngFor="let serviceType of serviceTypes"
   >
     <div class="serviceTypes__item">
-      <div class="serviceTypes__item-number">0{{ serviceType.number }}</div>
       <div class="serviceTypes__title">
         {{ serviceType.title }}
-        <app-primary-button-big
-          [label]="'Обсудить проект'"
-          appDialog
-        ></app-primary-button-big>
+        <div class="serviceTypes__description">
+          {{ serviceType.description }}
+        </div>
       </div>
-      <div class="serviceTypes__description">
-        {{ serviceType.description }}
-      </div>
-      <div class="serviceTypes__price">
-        от
-        <span class="highlighted" style="font-size: 42px">{{
-          serviceType.price
-        }}</span>
-        руб.
+      <div class="serviceTypes__tags">
+        <div class="tag__item">
+          от
+          <span class="highlighted" style="font-size: 42px">{{
+            serviceType.price
+          }}</span>
+          руб.
+        </div>
+        <div class="tag__item">
+          от
+          <span class="highlighted" style="font-size: 42px">{{
+            serviceType.price
+          }}</span>
+          руб.
+        </div>
+        <div class="tag__item">
+          от
+          <span class="highlighted" style="font-size: 42px">{{
+            serviceType.price
+          }}</span>
+          руб.
+        </div>
       </div>
     </div>
     <div class="serviceTypes__steps">
@@ -33,5 +44,9 @@
         <li *ngFor="let list of serviceType.list">{{ list.listItem }}</li>
       </ul>
     </div>
+    <app-primary-button-big
+      [label]="'Обсудить проект'"
+      appDialog
+    ></app-primary-button-big>
   </div>
 </div>

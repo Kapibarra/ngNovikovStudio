@@ -8,7 +8,6 @@
   max-width: 1600px;
   text-align: right;
   letter-spacing: 1px;
-  text-transform: lowercase;
   margin: 0 auto;
   color: #ffffff;
   display: flex;
@@ -30,6 +29,13 @@
 }
 .serviceTypes__inner-wrapper {
   margin-bottom: 140px;
+  max-width: 1400px;
+  border-radius: 40px;
+  box-sizing: border-box;
+  padding: 80px;
+  background-color: #1b1b1b;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 .serviceTypes__title {
   font-family: "Jost";
@@ -37,16 +43,20 @@
   font-weight: 500;
   width: 115%;
   max-width: 550px;
-  font-size: 64px;
+  font-size: 20px;
   line-height: 58%;
   /* identical to box height, or 64px */
   transition: all 0.2s ease-in-out;
-  text-transform: lowercase;
+  text-transform: uppercase;
   color: #ffffff;
-  gap: 40px;
+  gap: 20px;
+  justify-content: space-between;
   display: flex;
+  border: 2px solid #f9f9f9;
+  border-radius: 32px;
+  padding: 12px;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   @media screen and (max-width: 968px) {
     display: flex;
     flex-direction: row;
@@ -68,8 +78,8 @@
   font-family: "days-one";
   font-style: normal;
   font-weight: 300;
-  font-size: 30px;
-  line-height: 26px;
+  font-size: 16px;
+  line-height: 14px;
   color: #ffffff;
   max-width: 700px;
 }
@@ -88,6 +98,7 @@
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
+  margin-bottom: 30px;
   & ul {
     max-width: 720px;
     width: 100%;
