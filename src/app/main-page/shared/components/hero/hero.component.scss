@@ -316,10 +316,11 @@
     position: relative;
     & .hero__image {
       position: absolute;
-      right: -20%;
+      right: -80px;
       top: -175px;
       z-index: 9;
       max-width: 360px;
+      overflow: hidden;
       & img {
         max-width: 360px;
       }
@@ -338,7 +339,7 @@
       font-family: "commissioner-2";
       font-weight: 100;
       text-align: right;
-      max-width: 600px;
+      max-width: 500px;
       margin-top: 30px;
       display: flex;
       align-self: flex-end;
@@ -367,11 +368,8 @@
           width: 100%;
           max-width: 1176px;
           border-radius: 16px;
-          border: 1px solid #d5d5d5;
           margin-bottom: 16px;
-          max-height: 100px;
-          object-fit: cover;
-          object-position: 0px -30px;
+          max-height: 200px;
         }
       }
       & .test-hero__item-xs {
@@ -382,12 +380,20 @@
         font-weight: 600;
         width: 100%;
         max-width: 400px;
+        min-height: 200px;
         border-radius: 30px;
         box-sizing: border-box;
         padding: 32px;
         cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         & .hero__item-img {
           max-width: 340px;
+        }
+        & .icon {
+          width: 40px;
+          height: 40px;
         }
       }
       & .hero__button {
