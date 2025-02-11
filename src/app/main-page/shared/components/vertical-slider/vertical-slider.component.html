@@ -1,4 +1,4 @@
-<div class="panel panel-1" style="background: lightcoral">
+<!-- <div class="panel panel-1" style="background: lightcoral">
   <h2>Section 1</h2>
 </div>
 <div class="panel panel-2" style="background: lightseagreen">
@@ -6,4 +6,49 @@
 </div>
 <div class="panel panel-3" style="background: lightblue">
   <h2>Section 3</h2>
+</div> -->
+<div
+  class="serviceTypes__inner-wrapper panel"
+  *ngFor="let serviceType of serviceTypes"
+>
+  <div class="serviceTypes__item">
+    <div class="serviceTypes__title">
+      {{ serviceType.title }}
+      <div class="serviceTypes__description">
+        {{ serviceType.description }}
+      </div>
+    </div>
+    <div class="serviceTypes__tags">
+      <div class="tag__item">
+        от
+        <span class="highlighted" style="font-size: 42px">{{
+          serviceType.price
+        }}</span>
+        руб.
+      </div>
+      <div class="tag__item">
+        от
+        <span class="highlighted" style="font-size: 42px">{{
+          serviceType.price
+        }}</span>
+        руб.
+      </div>
+      <div class="tag__item">
+        от
+        <span class="highlighted" style="font-size: 42px">{{
+          serviceType.price
+        }}</span>
+        руб.
+      </div>
+    </div>
+  </div>
+  <div class="serviceTypes__steps">
+    <ul>
+      <li *ngFor="let list of serviceType.list">{{ list.listItem }}</li>
+    </ul>
+  </div>
+  <app-primary-button-big
+    [label]="'Обсудить проект'"
+    appDialog
+  ></app-primary-button-big>
 </div>
