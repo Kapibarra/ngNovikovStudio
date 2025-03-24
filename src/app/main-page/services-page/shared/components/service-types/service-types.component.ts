@@ -10,11 +10,41 @@ export class ServiceTypesComponent implements OnInit {
   public isFormOpen = false;
   serviceTypes: serviceTypes[] = [
     {
+      title: 'Express Разработка',
+      number: 1,
+      description: 'Быстро, хорошо и без правок',
+      price: 35000,
+      tags: [
+        {
+          tagsItem: 'Без правок',
+        },
+        {
+          tagsItem: '2-3 дня',
+        },
+      ],
+      list: [
+        {
+          listItem: 'Проработка концепции дизайна',
+        },
+        {
+          listItem: 'Верстка',
+        },
+        {
+          listItem: 'Frontend Разработка',
+        },
+      ],
+    },
+    {
       title: 'лендинг',
       number: 1,
       description:
-        'подойдет, если вам нужно продвижение конкретной услуги или товара, идеально ложится с связке с Яндекс директ',
+        'Подойдет, если вам нужно продвижение конкретной услуги или товара, идеален в связке с Яндекс директ',
       price: 35000,
+      tags: [
+        {
+          tagsItem: 'Ux/Ui',
+        },
+      ],
       list: [
         {
           listItem: 'Проработка концепции дизайна',
@@ -33,6 +63,11 @@ export class ServiceTypesComponent implements OnInit {
       description:
         'Разработка и поддержка интернет-магазинов любой сложности. Интеграция с платежными системами и системами управления складом.',
       price: 55000,
+      tags: [
+        {
+          tagsItem: 'Ux/Ui',
+        },
+      ],
       list: [
         {
           listItem: 'Разработка дизайна сайта',
@@ -54,6 +89,11 @@ export class ServiceTypesComponent implements OnInit {
       description:
         'Разработка и создание сайтов на платформе Тильда. Адаптивный дизайн и высокая скорость загрузки.',
       price: 30000,
+      tags: [
+        {
+          tagsItem: 'Ux/Ui',
+        },
+      ],
       list: [
         {
           listItem: 'Разработка дизайна сайта',
@@ -75,6 +115,11 @@ export class ServiceTypesComponent implements OnInit {
       description:
         'Настройка контекстной рекламы для максимального эффекта и оптимизации расходов',
       price: 8000,
+      tags: [
+        {
+          tagsItem: 'Ux/Ui',
+        },
+      ],
       list: [
         {
           listItem: 'Выбор ключевых запросов',

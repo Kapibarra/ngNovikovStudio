@@ -1,0 +1,136 @@
+.calc__wrapper {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 0 auto;
+}
+
+.calculator-container {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 40px;
+  box-sizing: border-box;
+  padding: 80px;
+  background-color: #1b1b1b;
+  margin: 0 auto;
+}
+.calc__title {
+  font-family: "days-one";
+  font-style: normal;
+  font-weight: 500;
+  width: 115%;
+  max-width: 600px;
+  font-size: 42px;
+  line-height: 90%;
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+.calc__subtitle {
+  font-family: "commissioner-2";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 24px;
+  max-width: 500px;
+  color: #fff;
+}
+
+.base__price {
+  border: 2px solid #f9f9f9;
+  border-radius: 32px;
+  padding: 8px 12px;
+  font-family: "commissioner-2";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  margin-left: 15px;
+}
+.calc__options {
+  padding-bottom: 30px;
+  border-bottom: 2px solid #f9f9f9;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+  color: #777777;
+  font-family: "days-one";
+  font-style: normal;
+  font-weight: 400;
+}
+.calc__description {
+  margin-top: 30px;
+  list-style: inside;
+}
+.calc__description > li {
+  font-family: "commissioner-2";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: #ffffff;
+  padding-bottom: 7px;
+}
+h2,
+h3 {
+  color: #333;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  margin-top: 20px;
+  color: #006600;
+}
+.calc__button {
+  margin-top: 30px;
+  width: 100%;
+  height: 100%;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid #8b67f3;
+  border-radius: 32px;
+  background: rgba($color: #8b67f3, $alpha: 0.3);
+  font-family: "days-one";
+  font-style: normal;
+  font-weight: 400;
+  padding: 12px 32px;
+  font-size: 20px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: white;
+  transition: all 0.2s ease-out;
+  & span {
+    font-family: "days-one";
+    font-style: normal;
+    font-weight: 400;
+  }
+  & img {
+    transition: all 0.2s ease-out;
+    transform: rotate(0deg);
+  }
+  &:hover img {
+    transition: all 0.2s ease-out;
+    transform: translate(40%, 0%) rotate(-45deg);
+  }
+  &:hover {
+    transition: all 0.2s ease-out;
+    border: 2px solid #d5ff40;
+    background: rgba($color: #8b67f3, $alpha: 0.7);
+    cursor: pointer;
+    color: #d5ff40;
+  }
+}

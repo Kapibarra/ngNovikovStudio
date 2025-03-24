@@ -39,6 +39,15 @@ import { SmoothScrollService } from './main-page/shared/services/smoothScroll.se
 import { ServicesBannerComponent } from './main-page/services-page/shared/components/services-banner/services-banner.component';
 import { InViewportDirective } from './main-page/shared/directives/viewport.directive';
 import { VerticalSliderComponent } from './main-page/shared/components/vertical-slider/vertical-slider.component';
+import { WorkFlowComponent } from './main-page/shared/components/work-flow/work-flow.component';
+import { WorkFlowItemComponent } from './main-page/shared/components/work-flow/work-flow-item/work-flow-item.component';
+import { PortfolioPageComponent } from './main-page/portfolio-page/portfolio-page.component';
+import { ContactsPageComponent } from './main-page/contacts-page/contacts-page.component';
+import { LandingPageComponent } from './main-page/landing-page/landing-page.component';
+import { CorporativePageComponent } from './main-page/corporative-page/corporative-page.component';
+import { ShopPageComponent } from './main-page/shop-page/shop-page.component';
+import { AppsPageComponent } from './main-page/apps-page/apps-page.component';
+import { CalculatorComponent } from './main-page/shared/components/calculator/calculator.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +78,15 @@ import { VerticalSliderComponent } from './main-page/shared/components/vertical-
     ServicesBannerComponent,
     InViewportDirective,
     VerticalSliderComponent,
+    WorkFlowComponent,
+    WorkFlowItemComponent,
+    PortfolioPageComponent,
+    ContactsPageComponent,
+    LandingPageComponent,
+    CorporativePageComponent,
+    ShopPageComponent,
+    AppsPageComponent,
+    CalculatorComponent,
   ],
   providers: [
     CookieService,

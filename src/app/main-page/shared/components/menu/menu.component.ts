@@ -34,17 +34,29 @@ export const slideInOutAnimation = trigger('slideInOutAnimation', [
   transition('in => out', animate('400ms ease-out')),
   transition('out => in', animate('400ms ease-in')),
 ]);
+export const smoothSubmenu = trigger('submenuToggle', [
+  state(
+    'closed',
+    style({ 'max-height': '0px', opacity: '0', visibility: 'hidden' })
+  ),
+  state(
+    'open',
+    style({ 'max-height': '500px', opacity: '1', visibility: 'visible' })
+  ),
+  transition('closed <=> open', animate('300ms ease-in-out')),
+]);
+
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
-  animations: [slideInOutAnimation],
+  animations: [slideInOutAnimation, smoothSubmenu],
 })
 export class MenuComponent implements OnInit, AfterViewInit {
   @Input() isActiveMenu: boolean = false;
   @Output() isActiveMenuChange = new EventEmitter<boolean>();
   currentYear!: number;
-
+  isSubmenuOpen: boolean = false; // Состояние подменю "Проекты"
   constructor(
     private scroller: ViewportScroller,
     private smoothScroll: SmoothScrollService
@@ -57,7 +69,11 @@ export class MenuComponent implements OnInit, AfterViewInit {
   }
   closeMenu() {
     this.isActiveMenu = !this.isActiveMenu;
+    this.isSubmenuOpen = false; // Закрыть подменю, если закрывается главное меню
     this.isActiveMenuChange.emit(this.isActiveMenu);
+  }
+  toggleSubmenu(): void {
+    this.isSubmenuOpen = !this.isSubmenuOpen; // Переключение подменю
   }
   scrollTo() {
     setTimeout(() => {

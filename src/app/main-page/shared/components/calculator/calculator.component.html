@@ -1,0 +1,34 @@
+<div class="calc__wrapper">
+  <div class="calc__content">
+    <h2 class="highlighted calc__title">Максимально прозрачные рассчеты</h2>
+    <p class="calc__subtitle">
+      Вы можете добавить дополнительные услуги к вашему {{ title }}, а мы
+      составим договор и приступим к работе.
+    </p>
+  </div>
+  <div class="calculator-container">
+    <div class="calculator">
+      <div class="calc__options">
+        <span class="highlighted">Дизайн и разработка {{ titleForm }}:</span>
+        <span class="base__price">{{ basePrice }} RUB</span>
+        <ul class="calc__description">
+          <li *ngFor="let option of fixedOptions">{{ option }}</li>
+        </ul>
+      </div>
+      <div class="calc__adds">
+        <div *ngFor="let option of optionsList" class="calc__option">
+          <input
+            type="checkbox"
+            [checked]="option.selected"
+            (change)="option.selected = !option.selected; updatePrice()"
+          />
+          {{ option.name }}
+          <span class="add__price">+{{ option.price }} RUB</span>
+        </div>
+      </div>
+      <button class="calc__button">
+        Оформить заказ <span class="total__price">{{ totalPrice }} RUB</span>
+      </button>
+    </div>
+  </div>
+</div>

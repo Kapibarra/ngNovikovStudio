@@ -3,6 +3,9 @@ export class serviceTypes {
   number: number;
   description: string;
   price: number;
+  tags: {
+    tagsItem: string;
+  }[];
   list: {
     listItem: string;
   }[];
@@ -11,6 +14,9 @@ export class serviceTypes {
     description: string,
     number: number,
     price: number,
+    tags: {
+      tagsItem: string;
+    }[],
     list: {
       listItem: string;
     }[]
@@ -18,6 +24,7 @@ export class serviceTypes {
     this.title = title;
     this.description = description;
     this.number = number;
+    this.tags = tags;
     this.price = price;
     this.list = list;
   }

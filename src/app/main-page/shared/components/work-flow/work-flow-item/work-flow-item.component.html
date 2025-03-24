@@ -1,0 +1,22 @@
+<div class="acc-item">
+  <div class="acc-header" (click)="toggleAccordion()">
+    <div class="acc-number highlighted">
+      {{ id }}
+    </div>
+    <div class="header__title highlighted">
+      {{ title }}
+    </div>
+    <div class="accordion__icon">
+      <img
+        [@rotatedState]="!showBody ? 'default' : 'rotated'"
+        class="accordion__icon"
+        src="assets/images/icons/arrow-circle-down.png"
+      />
+    </div>
+  </div>
+  <div class="acc-body" [@smoothCollapse]="!showBody ? 'initial' : 'final'">
+    <p class="body">
+      <ng-content></ng-content>
+    </p>
+  </div>
+</div>
