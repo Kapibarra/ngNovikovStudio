@@ -13,6 +13,7 @@ export class MainPageComponent implements OnInit {
       secure: true, // secure attribute set to true
     });
   }
+  // landing options
 
   landingPageOptions: string[] = [
     'Маркетинговая стратегия 2',
@@ -28,19 +29,29 @@ export class MainPageComponent implements OnInit {
     { name: 'Дополнительные страницы', price: 4000, selected: false },
     { name: 'Тестирование производительности', price: 1500, selected: false },
   ];
+
+  //ecom options
+
   ecomPageOptions: string[] = [
-    'Маркетинговая стратегия 2',
-    'Написание продающих текстов 3',
-    'Разработка скелета (прототипа) 4',
-    'Индивидуальный дизайн 5',
-    'Адаптивная верстка на Тильда',
+    'Разработка архитектуры интернет-магазина',
+    'Дизайн основных страниц',
+    'Интеграция корзины и системы оформления заказа',
+    'Адаптив (десктоп, планшет, мобильный)',
+    'Оптимизация скорости загрузки страниц',
+    'Базовое SEO-продвижение',
+    'Руководство по CMS',
   ];
   ecomPageExtras = [
-    { name: 'SEO-оптимизация', price: 3000, selected: false },
-    { name: 'Интеграция с CRM', price: 5000666, selected: false },
-    { name: 'Анимации', price: 2000, selected: false },
-    { name: 'Дополнительные страницы', price: 4000, selected: false },
-    { name: 'Тестирование производительности', price: 1500, selected: false },
+    { name: 'Кастомные модули ( от )', price: 15000, selected: false },
+    { name: 'Дополнительные интеграции ( от )', price: 7000, selected: false },
+    { name: 'Дополнительные правки ( от )', price: 10000, selected: false },
+    {
+      name: 'Разработка анимаций ( от )',
+      price: 9000,
+      selected: false,
+    },
+    { name: 'Дополнительные страницы ( от )', price: 10000, selected: false },
+    { name: 'Тестирование производительности', price: 7000, selected: false },
   ];
 
   ngOnInit() {}

@@ -48,6 +48,8 @@ import { CorporativePageComponent } from './main-page/corporative-page/corporati
 import { ShopPageComponent } from './main-page/shop-page/shop-page.component';
 import { AppsPageComponent } from './main-page/apps-page/apps-page.component';
 import { CalculatorComponent } from './main-page/shared/components/calculator/calculator.component';
+import { NumberFormatPipe } from './main-page/shared/pipes/number-format.pipe';
+import { GallerySliderComponent } from './main-page/shared/components/gallery-slider/gallery-slider.component';
 
 @NgModule({
   declarations: [
@@ -87,6 +89,8 @@ import { CalculatorComponent } from './main-page/shared/components/calculator/ca
     ShopPageComponent,
     AppsPageComponent,
     CalculatorComponent,
+    NumberFormatPipe,
+    GallerySliderComponent,
   ],
   providers: [
     CookieService,

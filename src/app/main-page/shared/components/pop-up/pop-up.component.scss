@@ -4,28 +4,22 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  max-width: 400px;
-  background-color: #111111;
+  padding: 60px 80px;
+  border-top-left-radius: 48px;
+  border-bottom-left-radius: 48px;
   display: flex;
   flex-direction: column;
-  gap: 60px;
-  border: 1px solid #d5ff40;
-  border-radius: 10px;
-  // box-shadow: 2.8px 2.8px 2.2px rgba(#f55b4e, 0.02),
-  //   6.7px 6.7px 5.3px rgba(#f55b4e, 0.028),
-  //   12.5px 12.5px 10px rgba(#f55b4e, 0.035),
-  //   22.3px 22.3px 17.9px rgba(#f55b4e, 0.042),
-  //   41.8px 41.8px 33.4px rgba(#f55b4e, 0.05),
-  //   100px 100px 80px rgba(#f55b4e, 0.07);
-  padding: 20px;
-  padding-top: 40px;
-  padding-bottom: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-width: 600px;
   z-index: 199;
 }
 .popup__form-close-btn {
+  position: relative;
+  top: 45px;
+  right: 20px;
+  height: 20px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -50,6 +44,7 @@
   transition: opacity 0.3s ease;
 }
 .close__button {
+  position: relative;
   margin: 0;
   height: auto;
   background: transparent;
@@ -97,11 +92,30 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 360px;
-  margin: 0 auto;
-  font-family: "Jost";
+  width: 100%;
+  max-width: 600px;
+  font-family: "days-one";
   text-transform: uppercase;
-
+  border-radius: 40px;
+  box-sizing: border-box;
+  padding: 80px;
+  background-color: #0f0f0f;
+  margin: 0 auto;
+  & .form__title {
+    font-family: "days-one";
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 90%;
+    color: white;
+  }
+  & p {
+    font-family: "commissioner-2";
+    font-weight: 100;
+    text-align: left;
+    color: #ffffff;
+    opacity: 0.3;
+    font-size: 10px;
+  }
   & .contact-form-item {
     display: flex;
     flex-direction: column;
@@ -113,10 +127,9 @@
       flex-wrap: nowrap;
       justify-content: space-between;
       gap: 5px;
-      align-items: flex-end;
     }
     & .error {
-      color: coral;
+      color: #f55b4e;
     }
     & label {
       font-family: "Jost";
@@ -124,38 +137,34 @@
       font-weight: 100;
       font-size: 20px;
       line-height: 20px;
-      width: 164px;
     }
     & input {
       border: none;
       background-color: rgba($color: #000000, $alpha: 0);
-      border-bottom: #dadada 1px solid;
       width: 100%;
-      color: #f9f9f9;
-      text-transform: uppercase;
-      font-family: "Jost";
-      font-size: 18px;
-      width: 100%;
-      max-width: 200px;
+      max-width: 600px;
+      height: 80px;
+      font-family: "days-one";
       transition: all 0.3s ease-in-out;
       caret-color: #d5ff40;
       box-sizing: border-box;
-      padding: 1px;
-      padding-bottom: 5px;
-      padding-top: 5px;
+      padding: 12px 32px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 32px;
+      font-size: 24px;
       &:focus-visible {
         outline: -webkit-focus-ring-color auto 0px !important;
         border: none;
         transition: all 0.3s ease-in-out;
-        border-bottom: #d5ff40 1px solid;
+        border: #d5ff40 1px solid;
       }
     }
   }
   & .contact-form-button {
     width: 100%;
     height: 100%;
-    width: 240px;
-    height: 40px;
+    width: 100%;
+    height: 80px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -163,12 +172,13 @@
     align-items: center;
     gap: 10px;
     border: 2px solid #f9f9f9;
-    border-radius: 100px;
+    border-radius: 32px;
     background: rgba($color: #000000, $alpha: 0);
-    font-family: "Jost";
+    font-family: "days-one";
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    padding: 12px 32px;
+    font-size: 20px;
     line-height: 100%;
     text-transform: uppercase;
     color: #dadada;
@@ -176,8 +186,6 @@
     & img {
       transition: all 0.2s ease-out;
       transform: rotate(0deg);
-      width: 25px;
-      height: 25px;
     }
     &:hover img {
       transition: all 0.2s ease-out;
@@ -239,10 +247,4 @@
       background-color: #45077c;
     }
   }
-}
-.form__logo {
-  width: 100%;
-  max-width: 189px;
-  margin-top: 30px;
-  margin: 0 auto;
 }

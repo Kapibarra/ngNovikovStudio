@@ -32,16 +32,13 @@ export class VerticalSliderComponent implements OnInit, AfterViewInit {
         {
           tagsItem: '2-3 дня',
         },
+        {
+          tagsItem: 'Tilda',
+        },
       ],
       list: [
         {
           listItem: 'Проработка концепции дизайна',
-        },
-        {
-          listItem: 'Верстка',
-        },
-        {
-          listItem: 'Frontend Разработка',
         },
       ],
     },
@@ -53,18 +50,27 @@ export class VerticalSliderComponent implements OnInit, AfterViewInit {
       price: 35000,
       tags: [
         {
+          tagsItem: 'Под ключ',
+        },
+        {
           tagsItem: 'Ux/Ui',
+        },
+        {
+          tagsItem: 'Дизайн проект',
+        },
+        {
+          tagsItem: 'Верстка',
+        },
+        {
+          tagsItem: 'Angular',
+        },
+        {
+          tagsItem: 'React',
         },
       ],
       list: [
         {
           listItem: 'Проработка концепции дизайна',
-        },
-        {
-          listItem: 'Верстка',
-        },
-        {
-          listItem: 'Frontend Разработка',
         },
       ],
     },
@@ -78,24 +84,24 @@ export class VerticalSliderComponent implements OnInit, AfterViewInit {
         {
           tagsItem: 'Ux/Ui',
         },
+        {
+          tagsItem: 'Под ключ',
+        },
+        {
+          tagsItem: 'Дизайн проект',
+        },
+        {
+          tagsItem: 'Tilda',
+        },
       ],
       list: [
         {
           listItem: 'Разработка дизайна сайта',
         },
-        {
-          listItem: 'Разработка структуры сайта',
-        },
-        {
-          listItem: 'Интеграция с платежными системами',
-        },
-        {
-          listItem: 'Интеграция с системами управления складом',
-        },
       ],
     },
     {
-      title: 'Tilda',
+      title: 'Сайт на Tilda',
       number: 3,
       description:
         'Разработка и создание сайтов на платформе Тильда. Адаптивный дизайн и высокая скорость загрузки.',
@@ -104,19 +110,22 @@ export class VerticalSliderComponent implements OnInit, AfterViewInit {
         {
           tagsItem: 'Ux/Ui',
         },
+        {
+          tagsItem: 'Под ключ',
+        },
+        {
+          tagsItem: 'Дизайн проект',
+        },
+        {
+          tagsItem: 'Zero Block',
+        },
+        {
+          tagsItem: 'Модули JS',
+        },
       ],
       list: [
         {
           listItem: 'Разработка дизайна сайта',
-        },
-        {
-          listItem: 'Создание адаптивного дизайна',
-        },
-        {
-          listItem: 'Настройка высокой скорости загрузки сайта',
-        },
-        {
-          listItem: 'Интеграция с платежными системами',
         },
       ],
     },
@@ -128,21 +137,15 @@ export class VerticalSliderComponent implements OnInit, AfterViewInit {
       price: 8000,
       tags: [
         {
-          tagsItem: 'Ux/Ui',
+          tagsItem: 'Настройка РК',
+        },
+        {
+          tagsItem: 'Ведение РК',
         },
       ],
       list: [
         {
           listItem: 'Выбор ключевых запросов',
-        },
-        {
-          listItem: 'Составление релевантных объявлений',
-        },
-        {
-          listItem: 'Настройка таргетирования по интересам аудитории',
-        },
-        {
-          listItem: 'Анализ результатов и корректировка кампании',
         },
       ],
     },
@@ -174,15 +177,6 @@ export class VerticalSliderComponent implements OnInit, AfterViewInit {
       list: [
         {
           listItem: 'Выбор ключевых запросов',
-        },
-        {
-          listItem: 'Составление релевантных объявлений',
-        },
-        {
-          listItem: 'Настройка таргетирования по интересам аудитории',
-        },
-        {
-          listItem: 'Анализ результатов и корректировка кампании',
         },
       ],
     },

@@ -10,24 +10,30 @@
     <div class="calculator">
       <div class="calc__options">
         <span class="highlighted">Дизайн и разработка {{ titleForm }}:</span>
-        <span class="base__price">{{ basePrice }} RUB</span>
+        <span class="base__price">{{ basePrice | numberFormat }} руб.</span>
         <ul class="calc__description">
           <li *ngFor="let option of fixedOptions">{{ option }}</li>
         </ul>
       </div>
       <div class="calc__adds">
         <div *ngFor="let option of optionsList" class="calc__option">
-          <input
-            type="checkbox"
-            [checked]="option.selected"
-            (change)="option.selected = !option.selected; updatePrice()"
-          />
-          {{ option.name }}
-          <span class="add__price">+{{ option.price }} RUB</span>
+          <div class="calc__inner-wrapper">
+            <label class="custom-checkbox">
+              <input
+                type="checkbox"
+                [checked]="option.selected"
+                (change)="option.selected = !option.selected; updatePrice()"
+              />
+              <span class="checkbox-text">{{ option.name }}</span>
+            </label>
+          </div>
+
+          <div class="add__price">+{{ option.price | numberFormat }} руб.</div>
         </div>
       </div>
       <button class="calc__button">
-        Оформить заказ <span class="total__price">{{ totalPrice }} RUB</span>
+        Разработать сайт
+        <span class="total__price">{{ totalPrice | numberFormat }} руб.</span>
       </button>
     </div>
   </div>
