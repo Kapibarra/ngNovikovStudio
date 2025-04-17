@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
-import { NavigationEnd, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
+import { filter, map, mergeMap } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -20,11 +22,43 @@ import { NavigationEnd, Router } from '@angular/router';
     ]),
   ],
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit, OnInit {
   title = 'ngNovikovStudio';
   o: any;
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private titleService: Title,
+    private activatedRoute: ActivatedRoute
+  ) {
+    this.router.events
+      .pipe(
+        filter((event) => event instanceof NavigationEnd),
+        map(() => {
+          let route = this.activatedRoute;
+          while (route.firstChild) route = route.firstChild;
+          return route;
+        }),
+        mergeMap((route) => route.data)
+      )
+      .subscribe((data) => {
+        if (data['title']) {
+          this.titleService.setTitle(data['title']);
+        }
+      });
+  }
+  private timeoutId: any;
 
+  ngAfterViewInit(): void {
+    window.addEventListener('scroll', this.handleScroll.bind(this));
+  }
+
+  handleScroll(): void {
+    // document.body.style.transform = 'skew(2deg, 2deg)';
+    // clearTimeout(this.timeoutId);
+    // this.timeoutId = setTimeout(() => {
+    //   document.body.style.transform = 'skew(0deg, 0deg)';
+    // }, 150);
+  }
   ngOnInit() {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd && event.url === '/service') {

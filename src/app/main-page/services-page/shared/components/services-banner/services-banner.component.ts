@@ -5,9 +5,10 @@ import SwiperCore, {
   Navigation,
   Autoplay,
   EffectFade,
+  EffectCoverflow,
 } from 'swiper';
 // install Swiper modules
-SwiperCore.use([Navigation, Autoplay, EffectFade]);
+SwiperCore.use([Navigation, Autoplay, EffectFade, EffectCoverflow]);
 @Component({
   selector: 'app-services-banner',
   templateUrl: './services-banner.component.html',
@@ -59,22 +60,26 @@ export class ServicesBannerComponent implements OnInit {
   ];
 
   config: SwiperOptions = {
-    slidesPerView: 1,
+    slidesPerView: 3,
     spaceBetween: 20,
+    centeredSlides: true,
     loop: true,
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true,
+    effect: 'coverflow',
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
     },
     navigation: false,
     pagination: { clickable: true },
     autoplay: {
-      delay: 2000,
+      delay: 23333000,
       disableOnInteraction: false,
     },
     breakpoints: {
       1920: {
-        slidesPerView: 1,
+        slidesPerView: 2,
         spaceBetween: 20,
       },
     },

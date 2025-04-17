@@ -1,0 +1,23 @@
+<div class="contact-container">
+  <div class="contact-label">Свяжитесь с нами</div>
+
+  <button class="contact-toggle" (click)="toggleMenu()">
+    <img src="assets/images/icons/chat.png" />
+  </button>
+
+  <ul class="contact-menu" [class.open]="menuOpen">
+    <li class="wa">
+      <a href="https://wa.me/79001234567" target="_blank" rel="noopener"
+        >WhatsApp</a
+      >
+    </li>
+    <li class="tg">
+      <a href="https://t.me/yourtelegramusername" target="_blank" rel="noopener"
+        >Telegram</a
+      >
+    </li>
+    <li class="phone">
+      <a href="tel:+79001234567">Позвонить</a>
+    </li>
+  </ul>
+</div>

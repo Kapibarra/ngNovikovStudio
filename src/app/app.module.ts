@@ -50,6 +50,11 @@ import { AppsPageComponent } from './main-page/apps-page/apps-page.component';
 import { CalculatorComponent } from './main-page/shared/components/calculator/calculator.component';
 import { NumberFormatPipe } from './main-page/shared/pipes/number-format.pipe';
 import { GallerySliderComponent } from './main-page/shared/components/gallery-slider/gallery-slider.component';
+import { TimelineComponent } from './main-page/shared/components/timeline/timeline.component';
+import { MessendgerComponent } from './main-page/shared/components/messendger/messendger.component';
+import { SeoPageComponent } from './main-page/seo-page/seo-page.component';
+import { WorkflowSeoComponent } from './main-page/seo-page/components/workflow/workflow.component';
+import { PricingComponent } from './main-page/seo-page/components/pricing/pricing.component';
 
 @NgModule({
   declarations: [
@@ -91,6 +96,11 @@ import { GallerySliderComponent } from './main-page/shared/components/gallery-sl
     CalculatorComponent,
     NumberFormatPipe,
     GallerySliderComponent,
+    TimelineComponent,
+    MessendgerComponent,
+    SeoPageComponent,
+    WorkflowSeoComponent,
+    PricingComponent,
   ],
   providers: [
     CookieService,

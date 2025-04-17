@@ -45,8 +45,10 @@
         font-style: normal;
         font-weight: 600;
         display: flex;
+        flex-grow: 1;
         flex-direction: column;
         justify-content: flex-end;
+        transition: flex-basis 0.3s ease;
         width: 292px;
         max-width: 400px;
         height: 292px;

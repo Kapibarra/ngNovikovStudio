@@ -1,1 +1,50 @@
-<p>corporative-page works!</p>
+<div class="test-hero__wrapper">
+  <div class="test-hero">
+    <h1 class="test-hero__title">
+      Разработка <span class="highlighted">Корпоративных сайтов </span>
+    </h1>
+    <h2 class="test-hero__subtitle">
+      Работем на результат и понимем, что для B2B сегмента сайт — это не просто
+      витрина, а инструмент доверия и продаж Берем дизайн и разработку
+      корпоративного сайта для вашего бизнеса на себя! Индивидуальный дизайн,
+      удобство пользователей и функциональность.
+    </h2>
+    <div class="test-hero__inner-wrapper">
+      <div class="test-hero__item-xs">
+        <img
+          class="hero__item-img icon"
+          src="assets/images/icons/experience.png"
+        />
+        <span class="highlighted">8 лет опыта в разработке</span>
+      </div>
+      <div class="test-hero__item-xs">
+        <img
+          class="hero__item-img icon"
+          src="assets/images/icons/projects.png"
+        />
+        <span class="highlighted">30+ реализованых проектов</span>
+      </div>
+      <div class="test-hero__item-xs">
+        <img class="hero__item-img icon" src="assets/images/icons/team.png" />
+        <span class="highlighted">80+ рекламных компаний запущено</span>
+      </div>
+    </div>
+    <app-primary-button-big
+      [label]="'Заказать разработку корпоративного сайта'"
+    ></app-primary-button-big>
+  </div>
+</div>
+<app-gallery-slider></app-gallery-slider>
+<app-timeline></app-timeline>
+<app-calculator
+  [basePrice]="70000"
+  [title]="'Лендингу'"
+  [titleForm]="'Лендинга'"
+  [fixedOptions]="corporativePageOptions"
+  [optionsList]="corporativePageExtras"
+>
+  ></app-calculator
+>
+<app-marquee></app-marquee>
+<app-team></app-team>
+<app-contacts></app-contacts>

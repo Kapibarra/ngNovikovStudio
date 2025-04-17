@@ -1,0 +1,163 @@
+.panel {
+  margin: 0 auto;
+  background: #eee;
+}
+
+.card-2 {
+  height: 400px;
+  margin: 0 auto;
+  background: #fff;
+}
+.panel-1 {
+  background: lightcoral;
+  z-index: 3;
+}
+.panel-2 {
+  background: lightseagreen;
+  z-index: 2;
+}
+.panel-3 {
+  background: lightblue;
+  z-index: 1;
+}
+.serviceTypes__title-header {
+  font-family: "days-one";
+  font-weight: 300;
+  font-size: 60px;
+  line-height: 120%;
+  width: 100%;
+  max-width: 1260px;
+  text-align: right;
+  letter-spacing: 1px;
+  margin: 0 auto;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 120px;
+}
+.serviceTypes__item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  & .serviceTypes__tags {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #eee;
+    font-family: "commissioner-2";
+    font-weight: 600;
+    & .tag__item {
+      border: 2px solid #f9f9f9;
+      border-radius: 32px;
+      padding: 8px 12px;
+    }
+  }
+}
+.serviceTypes__inner-wrapper {
+  margin-bottom: 140px;
+  max-width: 1400px;
+  border-radius: 40px;
+  box-sizing: border-box;
+  padding: 80px;
+  background-color: #363636;
+  opacity: 0;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  transform: translateX(-1000px);
+  scale: 0.5;
+  transition: all 0.3s ease-in-out;
+}
+.serviceTypes__inner-wrapper.inViewport {
+  background-color: #1b1b1b;
+  transform: translateX(0px);
+  scale: 1;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+.serviceTypes__title {
+  font-family: "days-one";
+  font-style: normal;
+  font-weight: 500;
+  width: 115%;
+  max-width: 600px;
+  font-size: 42px;
+  line-height: 90%;
+  /* identical to box height, or 64px */
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+  color: #ffffff;
+  gap: 20px;
+  justify-content: space-between;
+  display: flex;
+  border-radius: 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  @media screen and (max-width: 968px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    font-size: 32px;
+    max-width: 700px;
+  }
+}
+.serviceTypes__item-number {
+  font-family: "days-one";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 42px;
+  color: #f55b4e;
+}
+.serviceTypes__description {
+  font-family: "days-one";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 14px;
+  color: #ffffff;
+  max-width: 700px;
+}
+.serviceTypes__price {
+  font-family: "days-one";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 26px;
+  color: #ffffff;
+}
+.serviceTypes__steps {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  & ul {
+    max-width: 720px;
+    width: 100%;
+    & li {
+      text-align: right;
+      font-family: "days-one";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      text-transform: uppercase;
+      line-height: 76px;
+      color: #ffffff;
+      border-bottom: 1px solid rgba($color: #d5ff40, $alpha: 0.5);
+    }
+  }
+}

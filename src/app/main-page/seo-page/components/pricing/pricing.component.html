@@ -1,0 +1,35 @@
+<div
+  class="serviceTypes__inner-wrapper panel"
+  *ngFor="let serviceType of serviceTypes"
+  inViewport
+>
+  <div class="serviceTypes__item">
+    <div class="serviceTypes__title">
+      {{ serviceType.title }}
+    </div>
+    <div class="serviceTypes__description highlighted">
+      {{ serviceType.description }}
+    </div>
+    <div class="serviceTypes__tags">
+      <div class="tag__item" *ngFor="let tagItem of serviceType.tags">
+        {{ tagItem.tagsItem }}
+      </div>
+    </div>
+    <div class="serviceTypes__price">
+      от
+      <span class="highlighted" style="font-size: 42px">{{
+        serviceType.price
+      }}</span>
+      руб.
+    </div>
+  </div>
+  <!-- <div class="serviceTypes__steps">
+    <ul>
+      <li *ngFor="let list of serviceType.list">{{ list.listItem }}</li>
+    </ul>
+  </div> -->
+  <app-primary-button-big
+    [label]="'Обсудить проект'"
+    appDialog
+  ></app-primary-button-big>
+</div>

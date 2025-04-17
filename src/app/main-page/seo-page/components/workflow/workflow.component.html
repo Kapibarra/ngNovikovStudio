@@ -1,0 +1,21 @@
+<div class="steps">
+  <!-- Список шагов -->
+  <div class="steps__sidebar">
+    <div class="steps__line"></div>
+    <div
+      class="steps__item"
+      *ngFor="let step of steps; let i = index"
+      [class.steps__item--active]="i === activeIndex"
+      (click)="selectStep(i)"
+    >
+      <div class="steps__circle">{{ i + 1 }}</div>
+      <div class="steps__title">{{ step.title }}</div>
+    </div>
+  </div>
+
+  <!-- Контент активного шага -->
+  <div class="steps__content">
+    <h3 class="steps__content-title">{{ steps[activeIndex].title }}</h3>
+    <p class="steps__content-text">{{ steps[activeIndex].content }}</p>
+  </div>
+</div>

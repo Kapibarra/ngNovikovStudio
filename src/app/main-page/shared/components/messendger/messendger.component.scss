@@ -1,0 +1,120 @@
+.contact-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+
+  .contact-label {
+    background: #2c3e50;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: "commissioner-2";
+    font-weight: 100;
+    text-align: right;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+  }
+
+  .contact-toggle {
+    background: #d5ff40;
+    color: black;
+    border: none;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: #d5ff40;
+    }
+  }
+
+  .contact-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    li {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+
+      a {
+        display: block;
+        padding: 10px 14px;
+        color: #333;
+        text-decoration: none;
+        font-size: 14px;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: #f0f0f0;
+        }
+      }
+    }
+
+    &.open {
+      max-height: 300px;
+      opacity: 1;
+    }
+  }
+}
+.contact-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-toggle img {
+  width: 30px;
+  height: 30px;
+}
+.wa a {
+  background-color: #25d366;
+}
+.tg a {
+  background-color: #0088cc;
+}
+.phone a {
+}
+// Адаптив
+@media (max-width: 600px) {
+  .contact-container {
+    right: 15px;
+    bottom: 15px;
+
+    .contact-label {
+      font-size: 12px;
+      padding: 6px 10px;
+    }
+
+    .contact-toggle {
+      width: 48px;
+      height: 48px;
+      font-size: 20px;
+    }
+
+    .contact-menu li a {
+      font-size: 13px;
+      padding: 8px 12px;
+    }
+  }
+}

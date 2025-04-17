@@ -11,14 +11,12 @@ interface Option {
   styleUrls: ['./calculator.component.scss'],
 })
 export class CalculatorComponent {
-  @Input() basePrice: number = 100; // Базовая цена продукта
-  @Input() title: string = ''; // Базовая цена продукта
-  @Input() titleForm: string = ''; // Базовая цена продукта
-  @Input() optionsList: Option[] = []; // Дополнительные опции (с чекбоксами)
-  @Input() fixedOptions: string[] = []; // Фиксированные опции (без чекбоксов)
+  @Input() basePrice: number = 100;
+  @Input() title: string = '';
+  @Input() titleForm: string = '';
+  @Input() optionsList: Option[] = [];
+  @Input() fixedOptions: string[] = [];
   totalPrice: number = this.basePrice;
-
-  // Метод для обновления цены при выборе опций
   updatePrice(): void {
     this.totalPrice =
       this.basePrice +

@@ -25,13 +25,13 @@
       <div class="swiper-container">
         <swiper [config]="config">
           <ng-template swiperSlide *ngFor="let slide of bannerSlider">
-            <h3 class="slide__title">
+            <!-- <h3 class="slide__title">
               <img
                 class="slide__title-logo"
                 src="assets/images/icons/logo-icon.png"
               />
               {{ slide.title }}
-            </h3>
+            </h3> -->
             <img src="{{ slide.imgUrl }}" alt="slide" class="slide__image" />
           </ng-template>
         </swiper>

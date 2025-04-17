@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {
@@ -24,7 +25,10 @@ export class FormComponent implements OnInit {
   email: any;
   phone: any;
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private HttpClient: HttpClient
+  ) {}
 
   ngOnInit(): void {
     this.contactForm = this.formBuilder.group({
@@ -46,8 +50,22 @@ export class FormComponent implements OnInit {
 
   onSubmit() {
     if (this.contactForm.valid) {
-      console.log('Form submitted successfully!');
-      console.log(this.contactForm.value);
+      const formData = this.contactForm.value;
+
+      const body = new FormData();
+      body.append('name', formData.name);
+      body.append('email', formData.email);
+      body.append('phone', formData.phone);
+
+      this.HttpClient.post('https://твойсайт.ру/send.php', body).subscribe({
+        next: () => {
+          alert('Заявка отправлена!');
+          this.contactForm.reset();
+        },
+        error: () => {
+          alert('Ошибка при отправке. Попробуйте позже.');
+        },
+      });
     }
   }
 }

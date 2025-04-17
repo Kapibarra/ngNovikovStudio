@@ -22,10 +22,19 @@
     <li (click)="toggleSubmenu()">
       <a>Услуги</a>
       <ul class="submenu" [@submenuToggle]="isSubmenuOpen ? 'open' : 'closed'">
-        <li><a (click)="closeMenu()">Лендинги</a></li>
-        <li><a (click)="closeMenu()">Интернет-магазины</a></li>
-        <li><a (click)="closeMenu()">Корпоративные сайты</a></li>
-        <li><a (click)="closeMenu()">Индивидуальная разработка</a></li>
+        <li><a (click)="closeMenu()" routerLink="landings">Лендинги</a></li>
+        <li>
+          <a (click)="closeMenu()" routerLink="e-commerce">Интернет-магазины</a>
+        </li>
+        <li>
+          <a (click)="closeMenu()" routerLink="corporative-websites"
+            >Корпоративные сайты</a
+          >
+        </li>
+        <li>
+          <a (click)="closeMenu()" routerLink="">Индивидуальная разработка</a>
+        </li>
+        <li><a (click)="closeMenu()" routerLink="seo-ads">SEO и реклама</a></li>
       </ul>
     </li>
     <li><a routerLink="service" (click)="closeMenu()">Цены</a></li>

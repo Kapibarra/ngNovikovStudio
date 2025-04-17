@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "^15.2.10",
     "@angular/router": "^15.2.10",
     "@bugsplat/ngx-animated-counter": "^14.0.0",
+    "@glidejs/glide": "^3.7.1",
     "@ngx-translate/core": "^14.0.0",
     "@splinetool/loader": "^0.9.214",
     "@splinetool/runtime": "^0.9.214",

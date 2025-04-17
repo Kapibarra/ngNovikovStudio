@@ -1,36 +1,28 @@
-import { Component } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  QueryList,
+  ViewChildren,
+} from '@angular/core';
+import gsap from 'gsap';
 
 @Component({
   selector: 'app-gallery-slider',
   templateUrl: './gallery-slider.component.html',
   styleUrls: ['./gallery-slider.component.scss'],
 })
-export class GallerySliderComponent {
-  images = [
+export class GallerySliderComponent implements OnInit, AfterViewInit {
+  slides = [
     'assets/images/portfolio/bits.png',
     'assets/images/portfolio/viper.png',
     'assets/images/portfolio/thai.png',
     'assets/images/portfolio/fisio.png',
-    'assets/images/portfolio/viper.png',
-    'assets/images/portfolio/thai.png',
     'assets/images/portfolio/fisio.png',
   ];
+  constructor(private el: ElementRef) {}
+  ngOnInit(): void {}
 
-  activeIndex = 2; // Центрируем начальный активный слайд
-
-  // Метод для прокрутки вперед
-  nextSlide() {
-    this.activeIndex = (this.activeIndex + 1) % this.images.length;
-  }
-
-  // Метод для прокрутки назад
-  prevSlide() {
-    this.activeIndex =
-      (this.activeIndex - 1 + this.images.length) % this.images.length;
-  }
-
-  // Определяем, активен ли конкретный слайд
-  isActive(index: number): boolean {
-    return this.activeIndex === index;
-  }
+  ngAfterViewInit(): void {}
 }
