@@ -51,6 +51,8 @@
   & .serviceTypes__tags {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 5px;
     font-size: 14px;
     letter-spacing: 1px;
@@ -77,6 +79,33 @@
   transform: translateX(-1000px);
   scale: 0.5;
   transition: all 0.3s ease-in-out;
+
+  // Адаптивные стили для мобильных устройств
+  @media (max-width: 968px) {
+    padding: 40px 20px;
+    margin-bottom: 80px;
+    border-radius: 20px;
+    transform: translateY(
+      100px
+    ); // Используем translateY вместо translateX для мобильных
+    scale: 0.8;
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px;
+    margin-bottom: 40px;
+    border-radius: 16px;
+    transform: translateY(80px);
+    scale: 0.9;
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    transform: translateY(60px);
+    scale: 0.95;
+  }
 }
 .serviceTypes__inner-wrapper.inViewport {
   background-color: #1b1b1b;
@@ -84,6 +113,19 @@
   scale: 1;
   opacity: 1;
   transition: all 0.3s ease-in-out;
+
+  // Адаптивные стили для состояния inViewport на мобильных
+  @media (max-width: 968px) {
+    transform: translateY(0px); // Возвращаем к нулевому смещению по Y
+  }
+
+  @media (max-width: 768px) {
+    transform: translateY(0px);
+  }
+
+  @media (max-width: 480px) {
+    transform: translateY(0px);
+  }
 }
 .serviceTypes__title {
   font-family: "days-one";

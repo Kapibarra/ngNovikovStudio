@@ -7,6 +7,20 @@
   box-sizing: border-box;
   padding: 80px;
   background-color: #1b1b1b;
+
+  // Мобильная адаптация
+  @media (max-width: 768px) {
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 40px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 30px;
+  }
+
   & a {
     text-decoration: none;
     box-sizing: border-box;
@@ -16,6 +30,16 @@
     border-radius: 30px;
     box-sizing: border-box;
     padding: 32px;
+
+    @media (max-width: 768px) {
+      padding: 16px;
+      border-radius: 15px;
+    }
+
+    @media (max-width: 480px) {
+      padding: 12px;
+      border-radius: 10px;
+    }
   }
   & .portfolio__title-header {
     font-family: "days-one";
@@ -36,6 +60,15 @@
     flex-wrap: wrap;
     align-items: flex-start;
 
+    @media (max-width: 768px) {
+      font-size: 32px;
+      text-align: left;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 24px;
+    }
+
     & .porfolio__title-icon {
     }
   }
@@ -48,9 +81,16 @@
     text-align: right;
     color: white;
     max-width: 800px;
-    margin-left: auto;
-    margin-bottom: 120px;
-    /* or 80px */
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+      text-align: left;
+      max-width: 100%;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 14px;
+    }
   }
   & .portfolio {
     width: 100%;

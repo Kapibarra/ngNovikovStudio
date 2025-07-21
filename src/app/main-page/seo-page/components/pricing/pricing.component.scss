@@ -77,6 +77,21 @@
   transform: translateX(-1000px);
   scale: 0.5;
   transition: all 0.3s ease-in-out;
+
+  // Мобильная адаптация
+  @media (max-width: 768px) {
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    transform: translateY(100px);
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    transform: translateY(60px);
+  }
 }
 .serviceTypes__inner-wrapper.inViewport {
   background-color: #1b1b1b;

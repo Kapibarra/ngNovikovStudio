@@ -30,12 +30,33 @@
   //   )
   //   border-box;
   margin: 0 auto;
+
+  // Мобильная адаптация
+  @media (max-width: 768px) {
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px;
+    border-radius: 15px;
+  }
+
   & .team {
     max-width: 1400px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
     margin-top: 160px;
+
+    @media (max-width: 768px) {
+      margin-top: 20px;
+    }
+
+    @media (max-width: 480px) {
+      margin-top: 15px;
+    }
+
     & .team__heading-title {
       font-family: "days-one";
       font-weight: 300;
@@ -48,11 +69,15 @@
       letter-spacing: 1px;
       margin: 0 auto;
       color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      margin-bottom: 40px;
-      align-items: flex-end;
+
+      @media (max-width: 768px) {
+        font-size: 28px;
+        text-align: left;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 22px;
+      }
     }
     & .team__content {
       & .team__image {

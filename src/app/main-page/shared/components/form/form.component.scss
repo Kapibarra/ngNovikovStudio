@@ -11,12 +11,35 @@
   padding: 80px;
   background-color: #0f0f0f;
   margin: 0 auto;
+
+  // Мобильная адаптация
+  @media (max-width: 768px) {
+    padding: 10px;
+    border-radius: 20px;
+    max-width: 100%;
+    gap: 15px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px;
+    border-radius: 15px;
+    gap: 10px;
+  }
+
   & .form__title {
     font-family: "days-one";
     font-weight: 300;
     font-size: 20px;
     line-height: 90%;
     color: white;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 16px;
+    }
   }
   & p {
     font-family: "commissioner-2";
@@ -25,6 +48,10 @@
     color: #ffffff;
     opacity: 0.3;
     font-size: 10px;
+
+    @media (max-width: 480px) {
+      font-size: 9px;
+    }
   }
   & .contact-form-item {
     display: flex;

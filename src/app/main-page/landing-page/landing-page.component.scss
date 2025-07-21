@@ -8,6 +8,22 @@
   margin: 0 auto;
   margin-top: 180px;
   margin-bottom: 30px;
+
+  // Мобильная адаптация
+  @media (max-width: 768px) {
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
   & .test-hero {
     display: flex;
     flex-direction: column;
@@ -19,8 +35,21 @@
       z-index: 9;
       max-width: 360px;
       overflow: hidden;
+
+      @media (max-width: 768px) {
+        position: relative;
+        right: auto;
+        top: auto;
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+
       & img {
         max-width: 360px;
+
+        @media (max-width: 768px) {
+          max-width: 100%;
+        }
       }
     }
     & .test-hero__title {
@@ -30,6 +59,15 @@
       font-family: "days-one";
       font-style: normal;
       font-weight: 600;
+
+      @media (max-width: 768px) {
+        font-size: 32px;
+        max-width: 100%;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 24px;
+      }
     }
     & .test-hero__subtitle {
       font-size: 24px;
@@ -41,6 +79,17 @@
       margin-top: 30px;
       display: flex;
       align-self: flex-start;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+        max-width: 100%;
+        margin-top: 15px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 14px;
+        margin-top: 10px;
+      }
     }
     & .test-hero__inner-wrapper {
       display: flex;

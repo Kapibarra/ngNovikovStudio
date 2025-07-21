@@ -36,6 +36,19 @@
   background-color: #1b1b1b;
   margin: 0 auto;
   margin-bottom: 30px;
+
+  // Мобильная адаптация
+  @media (max-width: 768px) {
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+  }
 }
 .serviceTypes__title {
   font-family: "Jost";
