@@ -2,6 +2,8 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import { localEnvironment } from './environment.local';
+
 export const environment = {
   firebase: {
     projectId: 'novikovstudio-4c512',
@@ -11,7 +13,8 @@ export const environment = {
     authDomain: 'novikovstudio-4c512.firebaseapp.com',
     messagingSenderId: '20614670915',
   },
-  production: false
+  production: false,
+  telegram: localEnvironment.telegram,
 };
 
 /*

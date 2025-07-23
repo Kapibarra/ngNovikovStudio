@@ -8,7 +8,7 @@ import { SeoPageComponent } from './main-page/seo-page/seo-page.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
-  { path: 'service', component: ServicesPageComponent },
+  { path: 'prices', component: ServicesPageComponent },
   {
     path: 'landings',
     component: LandingPageComponent,

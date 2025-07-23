@@ -1,3 +1,5 @@
+import { localEnvironment } from './environment.local';
+
 export const environment = {
   firebase: {
     projectId: 'novikovstudio-4c512',
@@ -7,5 +9,6 @@ export const environment = {
     authDomain: 'novikovstudio-4c512.firebaseapp.com',
     messagingSenderId: '20614670915',
   },
-  production: true
+  production: true,
+  telegram: localEnvironment.telegram,
 };

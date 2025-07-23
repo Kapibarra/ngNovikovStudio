@@ -55,6 +55,7 @@ import { MessendgerComponent } from './main-page/shared/components/messendger/me
 import { SeoPageComponent } from './main-page/seo-page/seo-page.component';
 import { WorkflowSeoComponent } from './main-page/seo-page/components/workflow/workflow.component';
 import { PricingComponent } from './main-page/seo-page/components/pricing/pricing.component';
+import { MockupGalleryComponent } from './main-page/shared/components/mockup-gallery/mockup-gallery.component';
 
 @NgModule({
   declarations: [
@@ -101,6 +102,7 @@ import { PricingComponent } from './main-page/seo-page/components/pricing/pricin
     SeoPageComponent,
     WorkflowSeoComponent,
     PricingComponent,
+    MockupGalleryComponent,
   ],
   providers: [
     CookieService,

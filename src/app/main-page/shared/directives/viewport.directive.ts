@@ -55,8 +55,7 @@ export class InViewportDirective implements OnDestroy {
           this.inViewport.emit(true);
           console.log('Added inViewport class to:', target);
         } else {
-          target.classList.remove('inViewport');
-          this.inViewport.emit(false);
+          // target.classList.remove('inViewport');
         }
       }
     });

@@ -31,10 +31,42 @@
           <div class="add__price">+{{ option.price | numberFormat }} руб.</div>
         </div>
       </div>
-      <button class="calc__button">
-        Разработать сайт
-        <span class="total__price">{{ totalPrice | numberFormat }} руб.</span>
-      </button>
+
+      <!-- Форма с полем телефона -->
+      <form [formGroup]="phoneForm" (ngSubmit)="onSubmit()" class="calc__form">
+        <div class="calc__phone-input">
+          <input
+            type="tel"
+            id="phone"
+            formControlName="phone"
+            appPhoneMask
+            placeholder="Номер телефона"
+            class="calc__phone-field"
+          />
+          <div
+            *ngIf="
+              phoneForm.get('phone')?.invalid && phoneForm.get('phone')?.touched
+            "
+            class="calc__phone-error"
+          >
+            <div *ngIf="phoneForm.get('phone')?.hasError('required')">
+              Телефон обязателен
+            </div>
+            <div *ngIf="phoneForm.get('phone')?.hasError('invalidPhone')">
+              {{ phoneForm.get('phone')?.errors?.['invalidPhone']?.message }}
+            </div>
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          class="calc__button"
+          [disabled]="!phoneForm.valid || isSubmitting"
+        >
+          {{ isSubmitting ? "Отправляем..." : "Разработать сайт" }}
+          <span class="total__price">{{ totalPrice | numberFormat }} руб.</span>
+        </button>
+      </form>
     </div>
   </div>
 </div>
