@@ -1,11 +1,13 @@
 <div class="test-hero__wrapper">
   <div class="test-hero">
     <h1 class="test-hero__title">
-      Разработка <span class="highlighted">Лендингов </span>
+      <span class="highlighted">Индивидуальная разработка</span> на
+      React/Angular
     </h1>
     <h2 class="test-hero__subtitle">
-      Берем дизайн и разработку посадочной страницы для вашего бизнеса на себя!
-      Индивидуальный дизайн и максимум эффективности.
+      Создаем уникальные веб-приложения и сайты под ваши специфические
+      требования. Полный цикл разработки от идеи до запуска с использованием
+      современных технологий.
     </h2>
     <div class="test-hero__inner-wrapper">
       <div class="test-hero__item-xs">
@@ -20,33 +22,34 @@
           class="hero__item-img icon"
           src="assets/images/icons/projects.png"
         />
-        <span class="highlighted">100+ лендингов реализовано</span>
+        <span class="highlighted">200+ кастомных проектов</span>
       </div>
       <div class="test-hero__item-xs">
         <img class="hero__item-img icon" src="assets/images/icons/team.png" />
-        <span class="highlighted">80+ рекламных компаний запущено</span>
+        <span class="highlighted">React, Angular, Vue экспертиза</span>
       </div>
     </div>
     <app-primary-button-big
-      [label]="'Заказать разработку лендинга'"
+      [label]="'Заказать индивидуальную разработку'"
     ></app-primary-button-big>
   </div>
 </div>
 
 <!-- SEO блок с подробной информацией об услуге -->
-<app-seo-service-info [serviceData]="landingServiceData"></app-seo-service-info>
+<app-seo-service-info
+  [serviceData]="developmentServiceData"
+></app-seo-service-info>
 
 <app-gallery-slider></app-gallery-slider>
 <app-timeline></app-timeline>
 <app-calculator
-  [basePrice]="70000"
-  [title]="'Лендингу'"
-  [titleForm]="'Лендинга'"
-  [fixedOptions]="landingPageOptions"
-  [optionsList]="landingPageExtras"
+  [basePrice]="120000"
+  [title]="'Проекту'"
+  [titleForm]="'Проекта'"
+  [fixedOptions]="developmentPageOptions"
+  [optionsList]="developmentPageExtras"
 >
-  ></app-calculator
->
+</app-calculator>
 <app-marquee></app-marquee>
 <app-team></app-team>
 <app-contacts></app-contacts>

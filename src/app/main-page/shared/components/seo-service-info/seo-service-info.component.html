@@ -1,0 +1,76 @@
+<section
+  class="seo-service"
+  [class.reversed]="isReversed"
+  itemscope
+  itemtype="https://schema.org/Service"
+>
+  <div class="seo-service__container">
+    <!-- Основной контентный блок -->
+    <div class="content-wrapper">
+      <!-- Hero секция услуги -->
+      <div class="service-hero">
+        <div class="service-hero__badge">
+          <app-icon-3d
+            [type]="getIconType(serviceData.features[0])"
+            [size]="24"
+            class="badge-icon-3d"
+          >
+          </app-icon-3d>
+          <span class="badge-text">{{ serviceData.title }}</span>
+        </div>
+
+        <h2 class="service-hero__title highlighted" itemprop="name">
+          {{ serviceData.subtitle }}
+        </h2>
+
+        <p class="service-hero__description" itemprop="description">
+          {{ serviceData.description }}
+        </p>
+
+        <!-- Статистика в виде мини-карточек -->
+        <div class="stats-row">
+          <div class="stat-card">
+            <div class="stat-value" itemprop="price">
+              от {{ serviceData.price.from | numberFormat }}
+            </div>
+            <div class="stat-label">{{ serviceData.price.currency }}</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" itemprop="deliveryTime">
+              {{ serviceData.deliveryTime }}
+            </div>
+            <div class="stat-label">на разработку</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Особенности в виде плиток -->
+      <div class="features-mosaic">
+        <h3 class="features-title">Что входит в услугу</h3>
+        <div class="features-grid">
+          <div
+            class="feature-tile"
+            *ngFor="let feature of serviceData.features; let i = index"
+            [class.featured]="i === 0"
+            itemscope
+            itemtype="https://schema.org/ServiceFeature"
+          >
+            <div class="tile-content">
+              <div class="tile-icon">
+                <app-icon-3d [type]="getIconType(feature)" [size]="48">
+                </app-icon-3d>
+              </div>
+              <h4 class="tile-title" itemprop="name">{{ feature.title }}</h4>
+              <p class="tile-description" itemprop="description">
+                {{ feature.description }}
+              </p>
+            </div>
+            <div class="tile-shine"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Боковая панель с заказом -->
+  </div>
+</section>

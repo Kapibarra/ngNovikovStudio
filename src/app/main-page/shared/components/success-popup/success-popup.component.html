@@ -1,0 +1,32 @@
+<div *ngIf="isVisible" class="success-overlay" (click)="onOverlayClick()">
+  <div
+    class="success-popup"
+    [@successAnimation]
+    (click)="$event.stopPropagation()"
+  >
+    <div class="success-popup__close" (click)="hide()">
+      <img src="assets/images/icons/close.svg" alt="Закрыть" />
+    </div>
+
+    <div class="success-popup__content" *ngIf="currentMessage">
+      <div class="success-popup__icon">
+        {{ currentMessage.icon }}
+      </div>
+
+      <h2 class="success-popup__title">
+        {{ currentMessage.title }}
+      </h2>
+
+      <p class="success-popup__message">
+        {{ currentMessage.message }}
+      </p>
+
+      <div class="success-popup__actions">
+        <button class="success-btn" (click)="hide()">
+          Понятно
+          <img src="assets/images/icons/arrow-circle-down.png" alt="Стрелка" />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -9,6 +9,7 @@
         formControlName="name"
         required
         placeholder="Ваше имя"
+        autocomplete="new-name"
       />
     </div>
 
@@ -33,6 +34,7 @@
         formControlName="email"
         required
         placeholder="Почта"
+        autocomplete="new-email"
       />
     </div>
 
@@ -65,9 +67,9 @@
         id="phone"
         formControlName="phone"
         required
-        pattern="^\d{10}$"
         appPhoneMask
         placeholder="Номер телефона"
+        autocomplete="new-phone"
       />
     </div>
     <div
@@ -79,8 +81,11 @@
       <div *ngIf="contactForm.get('phone')?.hasError('required')" class="error">
         Телефон обязателен.
       </div>
-      <div *ngIf="contactForm.get('phone')?.hasError('pattern')" class="error">
-        Не верный телефон.
+      <div
+        *ngIf="contactForm.get('phone')?.hasError('invalidPhone')"
+        class="error"
+      >
+        Введите корректный российский номер телефона.
       </div>
     </div>
   </div>
@@ -97,5 +102,19 @@
       height="50px"
     />
   </button>
-  <p>Нажимая на кнопку я даю согласие на обработку персональных данных</p>
+
+  <div class="form__privacy-wrapper">
+    <label class="form__privacy-checkbox">
+      <input
+        type="checkbox"
+        formControlName="privacyConsent"
+        class="form__checkbox-input"
+      />
+      <span class="form__checkbox-custom"></span>
+    </label>
+    <p>
+      Нажимая на кнопку я даю согласие на обработку персональных данных и
+      соглашаюсь с политикой конфиденциальности
+    </p>
+  </div>
 </form>

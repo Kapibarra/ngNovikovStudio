@@ -1,35 +1,35 @@
 .service-hero {
   width: 100%;
-  max-width: 1600px;
+  max-width: 1400px;
   margin: 0 auto;
   margin-top: 7%;
   margin-bottom: 80px;
   & .service__hero-title {
-    font-family: "Jost";
+    font-family: "days-one";
     font-style: normal;
     font-weight: 600;
-    font-size: 100px;
-    line-height: 70px;
+    font-size: 48px;
+    line-height: 85%;
     letter-spacing: -0.05em;
+    text-transform: uppercase;
     color: #ffffff;
     max-width: 1200px;
-    margin-bottom: 15px;
+    margin-bottom: 55px;
     @media screen and (max-width: 968px) {
-      font-size: 64px;
-      line-height: 40px;
+      font-size: 42px;
+      line-height: 85%;
     }
   }
   & .service__hero-subtitle {
-    font-family: "days-one";
+    font-family: "commissioner-2";
     font-style: normal;
-    font-weight: 300;
-    font-size: 32px;
-    line-height: 32px;
+    font-weight: 200;
+    font-size: 28px;
+    line-height: 105%;
     text-align: right;
     letter-spacing: -0.05em;
     color: #ffffff;
-    max-width: 600px;
-    display: flex;
+    max-width: 800px;
     align-items: flex-end;
     margin-left: auto;
   }

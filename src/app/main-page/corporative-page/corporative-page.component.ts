@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ServiceInfo } from '../shared/components/seo-service-info/seo-service-info.component';
+import { serviceExamples } from '../shared/models/service-examples';
 
 @Component({
   selector: 'app-corporative-page',
@@ -7,17 +9,23 @@ import { Component } from '@angular/core';
 })
 export class CorporativePageComponent {
   corporativePageOptions: string[] = [
-    'Маркетинговая стратегия 2',
-    'Написание продающих текстов 3',
-    'Разработка скелета (прототипа) 4',
-    'Индивидуальный дизайн 5',
-    'Адаптивная верстка на Тильда',
+    'Анализ ниши и конкурентов',
+    'Разработка информационной архитектуры',
+    'Создание дизайн-макетов',
+    'Адаптивная верстка',
+    'Программирование функционала',
+    'Интеграция с CMS',
+    'Тестирование и оптимизация',
   ];
+
   corporativePageExtras = [
-    { name: 'SEO-оптимизация', price: 3000, selected: false },
-    { name: 'Интеграция с CRM', price: 5000666, selected: false },
-    { name: 'Анимации', price: 2000, selected: false },
-    { name: 'Дополнительные страницы', price: 4000, selected: false },
-    { name: 'Тестирование производительности', price: 1500, selected: false },
+    { name: 'Интеграция с CRM', price: 15000, selected: false },
+    { name: 'Мультиязычность', price: 25000, selected: false },
+    { name: 'Онлайн-чат', price: 8000, selected: false },
+    { name: 'SEO-оптимизация', price: 12000, selected: false },
+    { name: 'Система управления контентом', price: 20000, selected: false },
+    { name: 'Интеграция с аналитикой', price: 5000, selected: false },
   ];
+
+  corporativeServiceData: ServiceInfo = serviceExamples['corporate'];
 }

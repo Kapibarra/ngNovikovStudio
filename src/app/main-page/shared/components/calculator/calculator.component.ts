@@ -5,6 +5,7 @@ import {
   TelegramCalculatorData,
 } from '../../services/telegram.service';
 import { PhoneValidator } from '../../validators/phone.validator';
+import { SuccessPopupService } from '../../services/success-popup.service';
 
 interface Option {
   name: string;
@@ -30,12 +31,14 @@ export class CalculatorComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private telegramService: TelegramService
+    private telegramService: TelegramService,
+    private successPopupService: SuccessPopupService
   ) {}
 
   ngOnInit(): void {
     this.phoneForm = this.formBuilder.group({
       phone: ['', [Validators.required, PhoneValidator.russianPhone]],
+      privacyConsent: [true, Validators.requiredTrue],
     });
   }
 
@@ -88,9 +91,7 @@ export class CalculatorComponent implements OnInit {
     this.telegramService.sendCalculatorRequest(telegramData).subscribe({
       next: (response: any) => {
         console.log('Ответ от Telegram:', response);
-        alert(
-          '✅ Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.'
-        );
+        this.successPopupService.showCalculatorSuccess();
         this.phoneForm.reset();
         this.isSubmitting = false;
         // Сбрасываем выбранные опции

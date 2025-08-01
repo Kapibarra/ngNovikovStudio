@@ -72,7 +72,9 @@ export class MenuComponent implements OnInit, AfterViewInit {
     this.isSubmenuOpen = false; // Закрыть подменю, если закрывается главное меню
     this.isActiveMenuChange.emit(this.isActiveMenu);
   }
-  toggleSubmenu(): void {
+  toggleSubmenu(event: Event): void {
+    event.preventDefault();
+    event.stopPropagation();
     this.isSubmenuOpen = !this.isSubmenuOpen; // Переключение подменю
   }
   scrollTo() {

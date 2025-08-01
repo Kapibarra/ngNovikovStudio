@@ -45,6 +45,8 @@ import { PortfolioPageComponent } from './main-page/portfolio-page/portfolio-pag
 import { ContactsPageComponent } from './main-page/contacts-page/contacts-page.component';
 import { LandingPageComponent } from './main-page/landing-page/landing-page.component';
 import { CorporativePageComponent } from './main-page/corporative-page/corporative-page.component';
+import { EcommercePageComponent } from './main-page/ecommerce-page/ecommerce-page.component';
+import { DevelopmentPageComponent } from './main-page/development-page/development-page.component';
 import { ShopPageComponent } from './main-page/shop-page/shop-page.component';
 import { AppsPageComponent } from './main-page/apps-page/apps-page.component';
 import { CalculatorComponent } from './main-page/shared/components/calculator/calculator.component';
@@ -56,6 +58,9 @@ import { SeoPageComponent } from './main-page/seo-page/seo-page.component';
 import { WorkflowSeoComponent } from './main-page/seo-page/components/workflow/workflow.component';
 import { PricingComponent } from './main-page/seo-page/components/pricing/pricing.component';
 import { MockupGalleryComponent } from './main-page/shared/components/mockup-gallery/mockup-gallery.component';
+import { SuccessPopupComponent } from './main-page/shared/components/success-popup/success-popup.component';
+import { SeoServiceInfoComponent } from './main-page/shared/components/seo-service-info/seo-service-info.component';
+import { Icon3dComponent } from './main-page/shared/components/seo-service-info/icon-3d/icon-3d.component';
 
 @NgModule({
   declarations: [
@@ -92,6 +97,8 @@ import { MockupGalleryComponent } from './main-page/shared/components/mockup-gal
     ContactsPageComponent,
     LandingPageComponent,
     CorporativePageComponent,
+    EcommercePageComponent,
+    DevelopmentPageComponent,
     ShopPageComponent,
     AppsPageComponent,
     CalculatorComponent,
@@ -103,6 +110,9 @@ import { MockupGalleryComponent } from './main-page/shared/components/mockup-gal
     WorkflowSeoComponent,
     PricingComponent,
     MockupGalleryComponent,
+    SuccessPopupComponent,
+    SeoServiceInfoComponent,
+    Icon3dComponent,
   ],
   providers: [
     CookieService,

@@ -1,6 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { TelegramService } from '../../services/telegram.service';
+import { PhoneValidator } from '../../validators/phone.validator';
+import { SuccessPopupService } from '../../services/success-popup.service';
 import {
   trigger,
   state,
@@ -27,7 +30,9 @@ export class FormComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private HttpClient: HttpClient
+    private HttpClient: HttpClient,
+    private telegramService: TelegramService,
+    private successPopupService: SuccessPopupService
   ) {}
 
   ngOnInit(): void {
@@ -37,7 +42,8 @@ export class FormComponent implements OnInit {
         '',
         [Validators.required, Validators.email, this.customEmailValidator],
       ],
-      phone: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
+      phone: ['', [Validators.required, PhoneValidator.russianPhone]],
+      privacyConsent: [true, Validators.requiredTrue],
     });
   }
 
@@ -52,20 +58,20 @@ export class FormComponent implements OnInit {
     if (this.contactForm.valid) {
       const formData = this.contactForm.value;
 
-      const body = new FormData();
-      body.append('name', formData.name);
-      body.append('email', formData.email);
-      body.append('phone', formData.phone);
-
-      this.HttpClient.post('https://твойсайт.ру/send.php', body).subscribe({
-        next: () => {
-          alert('Заявка отправлена!');
-          this.contactForm.reset();
-        },
-        error: () => {
-          alert('Ошибка при отправке. Попробуйте позже.');
-        },
-      });
+      // Отправляем сообщение через TelegramService
+      this.telegramService
+        .sendContactMessage(formData.name, formData.email, formData.phone)
+        .subscribe({
+          next: (response) => {
+            console.log('Сообщение отправлено в Telegram:', response);
+            this.successPopupService.showFormSuccess();
+            this.contactForm.reset();
+          },
+          error: (error) => {
+            console.error('Ошибка при отправке в Telegram:', error);
+            alert('Ошибка при отправке. Попробуйте позже.');
+          },
+        });
     }
   }
 }

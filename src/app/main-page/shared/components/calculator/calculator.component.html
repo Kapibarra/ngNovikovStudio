@@ -66,6 +66,21 @@
           {{ isSubmitting ? "Отправляем..." : "Разработать сайт" }}
           <span class="total__price">{{ totalPrice | numberFormat }} руб.</span>
         </button>
+
+        <div class="calc__privacy-wrapper">
+          <label class="calc__privacy-checkbox">
+            <input
+              type="checkbox"
+              formControlName="privacyConsent"
+              class="calc__checkbox-input"
+            />
+            <span class="calc__checkbox-custom"></span>
+          </label>
+          <p class="calc__privacy-text">
+            Нажимая на кнопку я даю согласие на обработку персональных данных и
+            соглашаюсь с политикой конфиденциальности
+          </p>
+        </div>
       </form>
     </div>
   </div>

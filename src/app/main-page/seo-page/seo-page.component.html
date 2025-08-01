@@ -1,1 +1,52 @@
-<app-pricing></app-pricing> <app-workflow-seo></app-workflow-seo>
+<div class="test-hero__wrapper">
+  <div class="test-hero">
+    <h1 class="test-hero__title">
+      <span class="highlighted">SEO продвижение</span> и контекстная реклама
+    </h1>
+    <h2 class="test-hero__subtitle">
+      Выводим ваш сайт в ТОП поисковых систем и настраиваем эффективную
+      контекстную рекламу. Больше клиентов, больше продаж с гарантированным
+      результатом!
+    </h2>
+    <div class="test-hero__inner-wrapper">
+      <div class="test-hero__item-xs">
+        <img
+          class="hero__item-img icon"
+          src="assets/images/icons/experience.png"
+        />
+        <span class="highlighted">5+ лет в SEO</span>
+      </div>
+      <div class="test-hero__item-xs">
+        <img
+          class="hero__item-img icon"
+          src="assets/images/icons/projects.png"
+        />
+        <span class="highlighted">150+ сайтов в ТОП</span>
+      </div>
+      <div class="test-hero__item-xs">
+        <img class="hero__item-img icon" src="assets/images/icons/team.png" />
+        <span class="highlighted">200% средний рост трафика</span>
+      </div>
+    </div>
+    <app-primary-button-big
+      [label]="'Заказать SEO продвижение'"
+    ></app-primary-button-big>
+  </div>
+</div>
+
+<!-- SEO блок с подробной информацией об услуге -->
+<app-seo-service-info [serviceData]="seoServiceData"></app-seo-service-info>
+
+<app-workflow-seo></app-workflow-seo>
+<app-pricing></app-pricing>
+<app-calculator
+  [basePrice]="25000"
+  [title]="'SEO продвижению'"
+  [titleForm]="'SEO продвижения'"
+  [fixedOptions]="seoPageOptions"
+  [optionsList]="seoPageExtras"
+>
+</app-calculator>
+<app-marquee></app-marquee>
+<app-team></app-team>
+<app-contacts></app-contacts>

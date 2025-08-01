@@ -85,11 +85,40 @@
       font-family: "days-one";
       transition: all 0.3s ease-in-out;
       caret-color: #d5ff40;
+      color: #ffffff;
       box-sizing: border-box;
       padding: 12px 32px;
       border: 1px solid rgba(255, 255, 255, 0.3);
       border-radius: 32px;
       font-size: 24px;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+        opacity: 1;
+      }
+
+      // Стили для автозаполнения браузера
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+        -webkit-text-fill-color: #ffffff !important;
+        box-shadow: 0 0 0 1000px transparent inset !important;
+        color: #ffffff !important;
+        caret-color: #d5ff40 !important;
+        background-color: transparent !important;
+        background-image: none !important;
+        transition: background-color 5000s ease-in-out 0s !important;
+      }
+
+      // Дополнительные стили для полного удаления автозаполнения
+      &:-webkit-autofill::first-line {
+        color: #ffffff !important;
+        font-family: "days-one" !important;
+        font-size: 24px !important;
+      }
+
       &:focus-visible {
         outline: -webkit-focus-ring-color auto 0px !important;
         border: none;
@@ -184,5 +213,59 @@
     &:hover {
       background-color: #45077c;
     }
+  }
+}
+
+// Стили для чекбокса согласия
+.form__privacy-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.form__privacy-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.form__checkbox-input {
+  display: none;
+}
+
+.form__checkbox-custom {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  background-color: transparent;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 4px;
+    height: 8px;
+    border: solid #d5ff40;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+}
+
+.form__checkbox-input:checked + .form__checkbox-custom {
+  background-color: #d5ff40;
+  border-color: #d5ff40;
+
+  &::after {
+    opacity: 1;
+    border-color: #0f0f0f;
   }
 }

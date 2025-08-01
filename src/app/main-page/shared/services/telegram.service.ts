@@ -83,4 +83,43 @@ export class TelegramService {
   getBotInfo(): Observable<any> {
     return this.http.get(`${this.apiUrl}/getMe`);
   }
+
+  // Геттеры для токена и chat ID
+  getBotToken(): string {
+    return this.botToken;
+  }
+
+  getChatId(): string {
+    return this.chatId;
+  }
+
+  // Метод для отправки простых сообщений (для форм обратной связи)
+  sendContactMessage(
+    name: string,
+    email: string,
+    phone: string
+  ): Observable<any> {
+    const message = this.formatContactMessage(name, email, phone);
+
+    const body = {
+      chat_id: this.chatId,
+      text: message,
+    };
+
+    return this.http.post(`${this.apiUrl}/sendMessage`, body);
+  }
+
+  private formatContactMessage(
+    name: string,
+    email: string,
+    phone: string
+  ): string {
+    return (
+      `📞 Новая заявка с сайта!\n\n` +
+      `👤 Имя: ${name}\n` +
+      `📧 Email: ${email}\n` +
+      `📱 Телефон: ${phone}\n\n` +
+      `⏰ Время: ${new Date().toLocaleString('ru-RU')}`
+    );
+  }
 }

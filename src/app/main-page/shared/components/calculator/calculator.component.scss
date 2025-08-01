@@ -287,3 +287,72 @@ h3 {
     }
   }
 }
+
+// Стили для текста согласия
+.calc__privacy-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.calc__privacy-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.calc__checkbox-input {
+  display: none;
+}
+
+.calc__checkbox-custom {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  background-color: transparent;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 4px;
+    height: 8px;
+    border: solid #d5ff40;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+}
+
+.calc__checkbox-input:checked + .calc__checkbox-custom {
+  background-color: #d5ff40;
+  border-color: #d5ff40;
+
+  &::after {
+    opacity: 1;
+    border-color: #1b1b1b;
+  }
+}
+
+.calc__privacy-text {
+  font-family: "commissioner-2";
+  font-weight: 100;
+  text-align: left;
+  color: #ffffff;
+  opacity: 0.3;
+  font-size: 10px;
+  margin: 0;
+  flex: 1;
+
+  @media (max-width: 480px) {
+    font-size: 9px;
+  }
+}

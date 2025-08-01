@@ -1,20 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ServiceBanner } from 'src/app/main-page/shared/models/servicesBanner';
-import SwiperCore, {
-  SwiperOptions,
-  Navigation,
-  Autoplay,
-  EffectFade,
-  EffectCoverflow,
-} from 'swiper';
-// install Swiper modules
-SwiperCore.use([Navigation, Autoplay, EffectFade, EffectCoverflow]);
+
 @Component({
   selector: 'app-services-banner',
   templateUrl: './services-banner.component.html',
   styleUrls: ['./services-banner.component.scss'],
 })
-export class ServicesBannerComponent implements OnInit {
+export class ServicesBannerComponent implements OnInit, OnDestroy {
   bannerSlider: ServiceBanner[] = [
     {
       title: ' VNUKOVO PREMIUM OUTLET ',
@@ -24,7 +16,6 @@ export class ServicesBannerComponent implements OnInit {
       title: ' montekrist media ',
       imgUrl: 'assets/images/portfolio/montekrist.png',
     },
-
     {
       title: ' Viper Official ',
       imgUrl: 'assets/images/portfolio/viper.png',
@@ -59,32 +50,9 @@ export class ServicesBannerComponent implements OnInit {
     },
   ];
 
-  config: SwiperOptions = {
-    slidesPerView: 3,
-    spaceBetween: 20,
-    centeredSlides: true,
-    loop: true,
-    effect: 'coverflow',
-    coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-    },
-    navigation: false,
-    pagination: { clickable: true },
-    autoplay: {
-      delay: 23333000,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      1920: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-    },
-  };
   constructor() {}
 
   ngOnInit(): void {}
+
+  ngOnDestroy(): void {}
 }

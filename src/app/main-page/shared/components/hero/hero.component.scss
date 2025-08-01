@@ -323,6 +323,7 @@
       max-width: 360px;
       overflow: hidden;
       & img {
+        overflow: hidden;
         max-width: 360px;
       }
     }
